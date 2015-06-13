@@ -1,8 +1,0 @@
-# Site settings
-title: Drive Constructor
-email: info@driveconstructor.com
-baseurl: "www.driveconstructor.com"
-url: "http://www.driveconstructor.com"
-
-# Build settings
-markdown: kramdown
