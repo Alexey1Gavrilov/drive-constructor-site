@@ -18,7 +18,7 @@ layout: default
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                    <input class="form-control" type="text"/>
+                    <input id='xxx' class="form-control" type="text"/>
                 </div>
                 <div class="col-xs-12 col-sm-6">
                     <input class="form-control" type="text"/>
