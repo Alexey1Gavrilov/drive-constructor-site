@@ -1,0 +1,32 @@
+---
+---
+
+.normal {
+  width: 80px;
+  height: 80px;
+  background-size: 100% auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.big {
+  @extend .normal;
+  width: 320px;
+  height: 320px;
+}
+
+.small {
+  @extend .normal;
+  width: 80px;
+  height: 80px;
+}
+
+.no-padding {
+  padding: 0px 0px;
+}
+
+.disabled {
+   pointer-events: none;
+   cursor: default;
+}

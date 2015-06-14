@@ -1,0 +1,14 @@
+topology1:
+  title: Topology1
+  elements: ["pump", "motor", "cable"]
+  applications: ["pumps"]
+
+topology2:
+  title: Topology2
+  elements: ["pump", "motor", "cable", "motor"]
+  applications: ["pumps"]
+
+topology3:
+  title: Topology3
+  elements: ["pump", "motor", "cable", "motor"]
+  applications: ["conveyers"]

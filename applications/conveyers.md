@@ -2,5 +2,7 @@
 layout: default
 title: Conveyers
 application: true
+appName: conveyers
 ---
-### Conveyers
+
+{% include applications/application.md %}
