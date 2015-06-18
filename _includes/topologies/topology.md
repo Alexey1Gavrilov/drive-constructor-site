@@ -1,4 +1,3 @@
-
 {% assign topology=site.data.topologies[include.name] %}
 
 {% if include.disabled %}

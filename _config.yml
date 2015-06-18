@@ -3,7 +3,7 @@ title: Drive Constructor
 email: info@driveconstructor.com
 baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://www.driveconstructor.com" # the base hostname & protocol for your site
-
+apiUrl: "http://localhost:8080/api"
 
 # Build settings
 markdown: kramdown
