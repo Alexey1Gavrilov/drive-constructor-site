@@ -11,7 +11,19 @@ $(function() {
     initialize: function() {
       _.bindAll(this, 'changed');
       this.listenTo(this.model, 'changed', this.render);
+      this.listenTo(this.model, 'fetch', app.hideWarning());
       this.render();
+    },
+
+    onError: function(model, response) {
+      var message = response.responseText;
+      if (response.responseJSON.errors) {
+        message = response.responseJSON.errors.join('<br>');   
+      } else if (response.responseJSON.message) {
+        message = response.responseJSON.message;
+      }
+      console.log(message);
+      app.showWarning(message);    
     },
 
     changed: function(evt) {
@@ -23,11 +35,10 @@ $(function() {
           .attr('id');
       this.model.set('topology.elements.'
           + element + '.' + changed.id, value);
-      this.model.save();
+      this.model.save({}, {error: this.onError});
     },
 
     render: function() {
-      console.log(this.model.attributes)
       _.each(this.model.attributes.topology.elements,
         function(value, key) {
           _.each(value, function(paramValue, paramName) {

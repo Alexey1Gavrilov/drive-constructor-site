@@ -20,3 +20,10 @@
 	</a>
 {% endfor %}
 </div>
+
+<div id="alert-placeholder"></div>
+
+<div class="btn-group" role="group" aria-label="">
+  <button type="button" class="btn btn-default"
+  		onClick="app.newSystem()">New system</button>
+</div>

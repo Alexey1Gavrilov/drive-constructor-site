@@ -2,10 +2,26 @@
 ---
 var app = app || {};
 
+app.loadSystem = function() {
+  app.system = new app.System();
+  var id = sessionStorage.getItem('currentSystemId');
+  var callback = {
+    success: function(system) {
+      app.trigger('system-loaded', system);
+    }
+  };
+  if (id) {
+    app.system.set('id', id);
+    app.system.fetch(callback);
+  } else {
+    app.system.save({}, callback);
+  }
+};
+
 $(function() {
   var apiUrl = "{{ site.apiUrl }}";
 
-  var System = Backbone.DeepModel.extend({
+  app.System = Backbone.DeepModel.extend({
     defaults: function() {
       return {
         topology: app.applications.get(1).get('topologies')[0]
@@ -22,23 +38,9 @@ $(function() {
       sessionStorage.setItem('currentSystemId', this.get('id'));
     }
   });
-  app.on('application-loaded', function() {
-    app.system = new System();
-    var id = sessionStorage.getItem('currentSystemId');
-    var callback = {
-      success: function(system) {
-        app.trigger('system-loaded', system);
-      }
-    };
-    if (id) {
-      app.system.set('id', id);
-      app.system.fetch(callback);
-    } else {
-      app.system.save({}, callback);
-    }
-  });
+  app.on('application-loaded', app.loadSystem);
   app.on('system-loaded', function(system) {
-    var systemView = new app.SystemView({
+    app.systemView = new app.SystemView({
       el: $('#element-form'),
       model: system
     });
