@@ -9,7 +9,7 @@
 
 <div class="btn-group btn-group-border" role="group">
 {% for e in topology.elements %}
-  {% if e == include.activeElement %}
+  {% if e == page.element %}
   		{% assign active="active" %}
   {% else %}
   		{% assign active=nil %}

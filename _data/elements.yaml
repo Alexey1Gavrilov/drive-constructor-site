@@ -1,0 +1,50 @@
+pump:
+  type:
+    type: select
+    label: "Type:"
+    values: ["CENTRIFUGAL", "PERIPHERAL", "SPECIAL",
+        "RECIPROCATING", "BLOW_CASE", "ROTARY"]
+  head:
+    type: number
+    label: "Head:"
+  flow:
+    type: number
+    label: "Flow:"
+  ratedEfficiency:
+    type: number
+    label: "Rated efficiency:"
+  ratedSpeed:
+    type: number
+    label: "Rated speed:"
+  fluidDensity:
+    type: number
+    label: "Fluid density:"
+  startingTorque:
+    type: number
+    label: "Starting torque:"
+
+motor:
+  type:
+    type: select
+    label: "Type:"
+    values: ["SCIM", "PMSM", "SYRM",
+        "FWSM", "DFIM"]
+  ratedPower:
+    type: number
+    label: "Rated power:"
+  explosionProtection:
+    type: text
+    label: "Explosion protection:"
+  coolantTemperature:
+    type: number
+    label: "Coolant temperature:"
+  ratedVoltageY:
+    type: number
+    label: "Rated volatage Y:"
+  cooling:
+    type: select
+    label: "Cooling:"
+    values: ["AIR", "WATER", "IC411",
+        "IC71W", "IC01", "IC611", "IC81W", "IC31"]
+    options: ["air", "water", "IC 411",
+        "IC 71W", "IC 01", "IC 611", "IC 81W", "IC 31"]

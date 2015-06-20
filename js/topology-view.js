@@ -10,7 +10,7 @@ $(function() {
 
     initialize: function() {
       _.bindAll(this, 'changed');
-      this.listenTo(this.model, 'changed', this.render);
+      this.listenTo(this.model, 'change', this.render);
       this.listenTo(this.model, 'fetch', app.hideWarning());
       this.render();
     },
@@ -29,10 +29,7 @@ $(function() {
     changed: function(evt) {
       var changed = evt.currentTarget;
       var value = $(evt.currentTarget).val();
-      var element = $('#element-form')
-          .children()
-          .first()
-          .attr('id');
+      var element = $('#element-form').data('element');
       this.model.set('topology.elements.'
           + element + '.' + changed.id, value);
       this.model.save({}, {error: this.onError});
@@ -42,7 +39,8 @@ $(function() {
       _.each(this.model.attributes.topology.elements,
         function(value, key) {
           _.each(value, function(paramValue, paramName) {
-            $('#' + key).find('input[id=' + paramName+ ']')
+            $('[data-element="' + key + '"]')
+              .find('input[id=' + paramName+ ']')
               .val(paramValue);  
           });
         });
