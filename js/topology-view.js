@@ -40,8 +40,8 @@ $(function() {
         function(value, key) {
           _.each(value, function(paramValue, paramName) {
             $('[data-element="' + key + '"]')
-              .find('input[id=' + paramName+ ']')
-              .val(paramValue);  
+              .find('#' + paramName)
+              .val(paramValue);
           });
         });
     }
