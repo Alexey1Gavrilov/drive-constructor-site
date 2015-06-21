@@ -21,7 +21,7 @@ app.loadSystem = function() {
   }
 };
 
-$(function() {
+(function() {
   var apiUrl = "{{ site.apiUrl }}";
 
   app.System = Backbone.DeepModel.extend({    
@@ -38,11 +38,12 @@ $(function() {
   app.on('application-loaded', app.loadSystem);
   app.on('system-loaded', function(system) {
     $(function() {
+      console.log(document.readyState);
       app.systemView = new app.SystemView({
         el: $('#element-form'),
         model: system
       });
     });
   });
-});
+})();
 

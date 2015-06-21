@@ -1,6 +1,6 @@
 var app = app || {};
 
-$(function() {
+(function() {
   app.SystemView = Backbone.View.extend({
 
     events : {
@@ -53,4 +53,4 @@ $(function() {
         });
     }
   });
-});
+})();

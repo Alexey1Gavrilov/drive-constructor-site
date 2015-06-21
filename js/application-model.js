@@ -2,7 +2,7 @@
 ---
 var app = app || {};
 
-$(function() {
+(function() {  
   _.extend(app, Backbone.Events);
   var apiUrl = "{{ site.apiUrl }}";
   Applicaiton = Backbone.Model.extend({});
@@ -20,4 +20,4 @@ $(function() {
     }
   });
 
-});
+})();
