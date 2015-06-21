@@ -3,7 +3,6 @@
 var app = app || {};
 
 app.loadSystem = function() {
-  app.system = new app.System();
   var id = sessionStorage.getItem('currentSystemId');
   var callback = {
     success: function(system) {
@@ -11,9 +10,13 @@ app.loadSystem = function() {
     }
   };
   if (id) {
+    app.system = new app.System();
     app.system.set('id', id);
     app.system.fetch(callback);
   } else {
+    app.system = new app.System({
+      topology: app.applications.get(1).get('topologies')[0]
+    });
     app.system.save({}, callback);
   }
 };
@@ -21,16 +24,10 @@ app.loadSystem = function() {
 $(function() {
   var apiUrl = "{{ site.apiUrl }}";
 
-  app.System = Backbone.DeepModel.extend({
-    defaults: function() {
-      return {
-        topology: app.applications.get(1).get('topologies')[0]
-      };
-    },
-    
+  app.System = Backbone.DeepModel.extend({    
     urlRoot: apiUrl +'/systems',
 
-    initialize: function() {
+    initialize: function(attributes) {
       this.on('sync', this.storeId);
     },
 
@@ -40,9 +37,11 @@ $(function() {
   });
   app.on('application-loaded', app.loadSystem);
   app.on('system-loaded', function(system) {
-    app.systemView = new app.SystemView({
-      el: $('#element-form'),
-      model: system
+    $(function() {
+      app.systemView = new app.SystemView({
+        el: $('#element-form'),
+        model: system
+      });
     });
   });
 });

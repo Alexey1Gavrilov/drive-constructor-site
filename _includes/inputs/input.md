@@ -3,6 +3,9 @@
 <label>{{param[1].label}}</label>
 {% if param[1].type == 'select' %}
 	<select id="{{param[0]}}" class="form-control">
+	{% if param[1].any %}
+		<option value="<any>">(any)</option>
+	{% endif %}
 	{% for value in param[1].values %}
 		{% if param[1].options %}
 		{% assign index = forloop.index | minus: 1 %}

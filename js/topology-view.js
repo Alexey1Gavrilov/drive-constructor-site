@@ -29,6 +29,9 @@ $(function() {
     changed: function(evt) {
       var changed = evt.currentTarget;
       var value = $(evt.currentTarget).val();
+      if (value === '<any>') {
+        value = null;
+      }
       var element = $('#element-form').data('element');
       this.model.set('topology.elements.'
           + element + '.' + changed.id, value);
@@ -39,9 +42,13 @@ $(function() {
       _.each(this.model.attributes.topology.elements,
         function(value, key) {
           _.each(value, function(paramValue, paramName) {
-            $('[data-element="' + key + '"]')
-              .find('#' + paramName)
-              .val(paramValue);
+            var param = $('[data-element="' + key + '"]')
+              .find('#' + paramName);
+            if (paramValue == null 
+                && param.prop("tagName") === 'SELECT') {
+              paramValue = '<any>';
+            }
+            param.val(paramValue);
           });
         });
     }

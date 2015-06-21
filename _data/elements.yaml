@@ -43,6 +43,7 @@ motor:
     label: "Rated volatage Y:"
   cooling:
     type: select
+    any: true
     label: "Cooling:"
     values: ["AIR", "WATER", "IC411",
         "IC71W", "IC01", "IC611", "IC81W", "IC31"]
