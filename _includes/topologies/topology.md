@@ -29,7 +29,7 @@
 
 {% if page.topology %}
 <div id="alert-placeholder"></div>
-<div id="loading"><div>
+<div id="loading"></div>
 
 <div class="btn-group" role="group" aria-label="">
   <button type="button" class="btn btn-default"
