@@ -7,6 +7,8 @@ pump:
   head:
     type: number
     label: "Head:"
+    default:
+      toplogy1: CENTRIFUGAL
   flow:
     type: number
     label: "Flow:"

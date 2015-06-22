@@ -1,8 +1,14 @@
-{% assign topology=site.data.topologies[include.name] %}
+{% if include.name %}
+{% assign name=include.name %}
+{% else %}
+{% assign name=page.topology %}
+{% endif %}
+
+{% assign topology=site.data.topologies[name] %}
 
 {% if include.disabled %}
 	{% assign disabled="disabled" %}
-### [{{ topology.title }}](/topologies/{{ include.name }})
+### [{{ topology.title }}](/topologies/{{name}})
 {% else %}
 ## {{topology.title}}
 {% endif %}
@@ -15,7 +21,7 @@
   		{% assign active=nil %}
   {% endif %}
  	<a class="btn btn-default no-padding {{disabled}} {{active}}"
- 			href="/topologies/{{include.name}}/elements/{{e}}.html">
+ 			href="/topologies/{{name}}/elements/{{e}}.html">
 		<div class="icon-el-{{e}} normal"></div>	
 	</a>
 {% endfor %}

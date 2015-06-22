@@ -1,0 +1,31 @@
+{
+  "type": "Topology1",
+  "elements": {
+    "pump": {
+      "type": "CENTRIFUGAL",
+      "head": 100.00,
+      "flow": 50.00,
+      "ratedEfficiency": 0.81,
+      "ratedSpeed": 1450.00,
+      "fluidDensity": 1000.00,
+      "startingTorque": 0.00,
+      "powerOnShaft": 60.56
+    },
+    "motor": {
+      "components": [],
+      "type": "SCIM",
+      "ratedPower": 75.00,
+      "ratedVoltageY": 960.00,
+      "cooling": "IC411",
+      "ipClass": "IP55",
+      "shaftHeight": 132.00,
+      "explosionProtection": "Ex D",
+      "coolantTemperature": 30.00,
+      "mounting": null,
+      "insulationClass": "F",
+      "frameMaterial": "STEEL",
+      "altitude": 1000.00,
+      "ambientTemperature": 30.00
+    }
+  }
+}

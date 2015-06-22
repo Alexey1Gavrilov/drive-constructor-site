@@ -1,5 +1,5 @@
 ---
 layout: default
-topology: true
+topology: topology1
 ---
-{% include topologies/topology.md name="topology1" %}
+{% include topologies/topology.md %}

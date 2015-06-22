@@ -1,7 +1,7 @@
 ---
 layout: default
-topology: true
+topology: topology1
 element: pump
 ---
-{% include topologies/topology.md name="topology1"%}
+{% include topologies/topology.md %}
 {% include topologies/form.md %}

@@ -6,6 +6,7 @@ app.loadSystem = function() {
   var id = sessionStorage.getItem('currentSystemId');
   var callback = {
     success: function(system) {
+      $('#element-form').show();
       app.trigger('system-loaded', system);
     }
   };
@@ -14,18 +15,20 @@ app.loadSystem = function() {
     app.system.set('id', id);
     app.system.fetch(callback);
   } else {
-    app.system = new app.System({
-      topology: app.applications.get(1).get('topologies')[0]
+    var topologyUrl = app.getCurrentTopologyUrl();
+    $.getJSON(topologyUrl + '/default.json', function(data) {
+      app.system = new app.System({
+        topology: data
+      });
+      app.system.save({}, callback);
     });
-    app.system.save({}, callback);
   }
 };
 
 (function() {
-  var apiUrl = "{{ site.apiUrl }}";
 
   app.System = Backbone.DeepModel.extend({    
-    urlRoot: apiUrl +'/systems',
+    urlRoot: app.apiUrl +'/systems',
 
     initialize: function(attributes) {
       this.on('sync', this.storeId);
@@ -35,10 +38,10 @@ app.loadSystem = function() {
       sessionStorage.setItem('currentSystemId', this.get('id'));
     }
   });
-  app.on('application-loaded', app.loadSystem);
+  app.loadSystem();
   app.on('system-loaded', function(system) {
+    $('#element-form').removeClass('form-hidden')
     $(function() {
-      console.log(document.readyState);
       app.systemView = new app.SystemView({
         el: $('#element-form'),
         model: system

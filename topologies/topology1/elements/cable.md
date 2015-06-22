@@ -1,7 +1,8 @@
 ---
 layout: default
-topology: true
+topology: topology1
+element: cable
 ---
-{% include topologies/topology.md name="topology1" activeElement="cable"%}
+{% include topologies/topology.md %}
 
 <div/ >
