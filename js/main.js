@@ -32,3 +32,14 @@ app.getCurrentTopologyUrl = function() {
 	}
 }
 
+app.spinner = new Spinner().spin();
+
+$.ajaxSetup({
+  beforeSend:function() {
+  	$(document.getElementById('loading').appendChild(app.spinner.el));
+  },  
+  complete:function() {
+  	app.spinner.stop();
+  }
+});
+
