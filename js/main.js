@@ -21,7 +21,7 @@ app.hideWarning = function() {
 }
 
 app.newSystem = function() {
-  sessionStorage.removeItem('currentSystemId');
+  $.removeCookie('currentSystemId');
   location.reload();
 }
 

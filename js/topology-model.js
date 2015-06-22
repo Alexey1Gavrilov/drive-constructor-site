@@ -3,7 +3,7 @@
 var app = app || {};
 
 app.loadSystem = function() {
-  var id = sessionStorage.getItem('currentSystemId');
+  var id = $.cookie('currentSystemId');
   var callback = {
     success: function(system) {
       $('#element-form').show();
@@ -35,7 +35,7 @@ app.loadSystem = function() {
     },
 
     storeId: function(x, y) {
-      sessionStorage.setItem('currentSystemId', this.get('id'));
+      $.cookie("currentSystemId", this.get('id'), { expires : 1 });
     }
   });
   app.loadSystem();
