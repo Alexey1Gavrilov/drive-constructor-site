@@ -3,7 +3,6 @@
 var app = app || {};
 
 app.apiUrl = "{{ site.apiUrl }}";
- _.extend(app, Backbone.Events);
 
 app.alertTemplate = _.template([
   '<div class="alert alert-warning">',
@@ -11,18 +10,31 @@ app.alertTemplate = _.template([
     '<strong>Warning!</strong> <%= message %>',
   '</div>'].join(''));
 
-app.showWarning = function(message) {
-  var html = app.alertTemplate({message: message});
-  $('#alert-placeholder').append(html);
-};
-
-app.hideWarning = function() {
-  //$('#alert-placeholder').child().remove();
-}
-
-app.newSystem = function() {
+app.resetSystem = function() {
   $.removeCookie('currentSystemId');
   location.reload();
+}
+
+app.onError = function(model, response) {
+  var message = response.responseText;
+  if (response.responseJSON.errors) {
+    message = response.responseJSON.errors.join('<br>');   
+  } else if (response.responseJSON.message) {
+    message = response.responseJSON.message;
+  }
+  console.log(message);
+  var html = app.alertTemplate({message: message});
+  $('#alert-placeholder').append(html);  
+}
+
+app.saveSystem = function() {
+  app.system.save({}, {
+    error: app.onError,
+    
+    success: function() {
+      $('#save-button').prop('disabled', true);
+    }
+  });  
 }
 
 app.getCurrentTopologyUrl = function() {
@@ -32,14 +44,34 @@ app.getCurrentTopologyUrl = function() {
 	}
 }
 
+app.selectTopologyElement = function(topology, element) {
+  app.activeElement = element; 
+  $('div[data-element-form]').each(function(index, e) {
+    var el = $(e);
+    if (el.data('element-form') === element) {
+      el.show();
+    } else {
+      el.hide();
+    }
+  });
+  $('div[data-element-button]').each(function(index, e) {
+    var el = $(e);
+    if (el.data('element-button') === element) {
+      el.addClass('active')
+    } else {
+      el.removeClass('active')
+    }
+  });
+}
+
 app.spinner = new Spinner().spin();
 
 $.ajaxSetup({
   beforeSend: function() {
-  	$(document.getElementById('loading').appendChild(app.spinner.el));
+//  	$(document.getElementById('loading').appendChild(app.spinner.el));
   },  
   complete: function() {
-  	app.spinner.stop();
+  //	app.spinner.stop();
   }
 });
 

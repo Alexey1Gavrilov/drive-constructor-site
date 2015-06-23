@@ -2,14 +2,8 @@
 ---
 var app = app || {};
 
-app.loadSystem = function() {
+app.loadSystem = function(callback) {
   var id = $.cookie('currentSystemId');
-  var callback = {
-    success: function(system) {
-      $('#element-form').show();
-      app.trigger('system-loaded', system);
-    }
-  };
   if (id) {
     app.system = new app.System();
     app.system.set('id', id);
@@ -26,7 +20,6 @@ app.loadSystem = function() {
 };
 
 (function() {
-
   app.System = Backbone.DeepModel.extend({    
     urlRoot: app.apiUrl +'/systems',
 
@@ -38,15 +31,18 @@ app.loadSystem = function() {
       $.cookie("currentSystemId", this.get('id'), { expires : 1 });
     }
   });
-  app.loadSystem();
-  app.on('system-loaded', function(system) {
-    $('#element-form').removeClass('form-hidden')
-    $(function() {
-      app.systemView = new app.SystemView({
-        el: $('#element-form'),
-        model: system
+  var callback = {
+    success: function(system) {
+      $(function() {
+        app.systemView = new app.SystemView({
+          el: $('#element-form'),
+          model: system
+        });
+        var e = Object.keys(system.get('topology.elements'))[0];
+        app.selectTopologyElement(null, e)
       });
-    });
-  });
+    }
+  };
+  app.loadSystem(callback);
 })();
 

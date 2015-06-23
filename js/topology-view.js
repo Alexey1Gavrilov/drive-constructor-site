@@ -11,19 +11,7 @@ var app = app || {};
     initialize: function() {
       _.bindAll(this, 'changed');
       this.listenTo(this.model, 'change', this.render);
-      this.listenTo(this.model, 'fetch', app.hideWarning());
       this.render();
-    },
-
-    onError: function(model, response) {
-      var message = response.responseText;
-      if (response.responseJSON.errors) {
-        message = response.responseJSON.errors.join('<br>');   
-      } else if (response.responseJSON.message) {
-        message = response.responseJSON.message;
-      }
-      console.log(message);
-      app.showWarning(message);    
     },
 
     changed: function(evt) {
@@ -32,17 +20,15 @@ var app = app || {};
       if (value === '<any>') {
         value = null;
       }
-      var element = $('#element-form').data('element');
       this.model.set('topology.elements.'
-          + element + '.' + changed.id, value);
-      this.model.save({}, {error: this.onError});
+          + app.activeElement + '.' + changed.id, value);
     },
 
-    render: function() {
+    render: function() {  
       _.each(this.model.attributes.topology.elements,
         function(value, key) {
           _.each(value, function(paramValue, paramName) {
-            var param = $('[data-element="' + key + '"]')
+            var param = $('[data-element-form="' + key + '"]')
               .find('#' + paramName);
             if (paramValue == null 
                 && param.prop("tagName") === 'SELECT') {
@@ -51,6 +37,7 @@ var app = app || {};
             param.val(paramValue);
           });
         });
+      $('#save-button').prop('disabled', !this.model.hasChanged());
     }
   });
 })();
