@@ -3,7 +3,7 @@
   {% if loopindex == 1 %}
   <div class="row">
   {% endif %}
-  {% include inputs/input.md param="{{param[0]}}" %}
+  {% include inputs/input.md element=include.element param="{{param[0]}}" %}
   {% if loopindex == 0 %}
   </div> <!-- end row -->
   {% endif %}

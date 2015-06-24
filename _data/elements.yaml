@@ -1,52 +1,60 @@
 pump:
   type:
     type: select
-    label: "Type:"
+    label: Type
+    content: >
+      Lorem ipsum dolor sit amet, consectetur adipiscing 
+      elit, sed do eiusmod tempor incididunt ut labore et 
+      dolore magna aliqua. Ut enim ad minim veniam
     values: ["CENTRIFUGAL", "PERIPHERAL", "SPECIAL",
         "RECIPROCATING", "BLOW_CASE", "ROTARY"]
   head:
     type: number
-    label: "Head:"
+    label: Head
+    content: >
+      Sed ut <b>perspiciatis</b> "unde" omnis iste 
+      natus error sit voluptatem accusantium 
+      doloremque laudantium
     default:
       toplogy1: CENTRIFUGAL
   flow:
     type: number
-    label: "Flow:"
+    label: Flow
   ratedEfficiency:
     type: number
-    label: "Rated efficiency:"
+    label: Rated efficiency
   ratedSpeed:
     type: number
-    label: "Rated speed:"
+    label: Rated speed
   fluidDensity:
     type: number
-    label: "Fluid density:"
+    label: Fluid density
   startingTorque:
     type: number
-    label: "Starting torque:"
+    label: Starting torque
 
 motor:
   type:
     type: select
-    label: "Type:"
+    label: Type
     values: ["SCIM", "PMSM", "SYRM",
         "FWSM", "DFIM"]
   ratedPower:
     type: number
-    label: "Rated power:"
+    label: Rated power
   explosionProtection:
     type: text
-    label: "Explosion protection:"
+    label: Explosion protection
   coolantTemperature:
     type: number
-    label: "Coolant temperature:"
+    label: Coolant temperature
   ratedVoltageY:
     type: number
-    label: "Rated volatage Y:"
+    label: Rated volatage Y
   cooling:
     type: select
     any: true
-    label: "Cooling:"
+    label: Cooling
     values: ["AIR", "WATER", "IC411",
         "IC71W", "IC01", "IC611", "IC81W", "IC31"]
     options: ["air", "water", "IC 411",
