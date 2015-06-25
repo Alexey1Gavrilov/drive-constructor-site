@@ -4,7 +4,7 @@
 {% assign param=site.data.elements[page.element][include.param] %}
 <div class="col-xs-6 form-group">
 <label 
-	class="text-primary label-link"
+	class="text-info label-link"
 	data-toggle="popover"
 	data-content="{{param[1].content | xml_escape}}{{more_info | markdownify | xml_escape}}"
 	data-html="true" data-title="{{param[1].label}}">{{param[1].label}}:</label>
