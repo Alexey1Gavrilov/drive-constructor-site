@@ -1,5 +1,5 @@
 {% for param in site.data.elements[include.element] %}
-  {% assign loopindex = forloop.index | modulo: 2 %}
+  {% assign loopindex = forloop.index | modulo: 4 %}
   {% if loopindex == 1 %}
   <div class="row">
   {% endif %}
