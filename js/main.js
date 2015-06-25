@@ -83,6 +83,9 @@ $(function () {
         && $(e.target).parents('.popover.in').length === 0) { 
         $('[data-toggle="popover"]').popover('hide');
     }
-});
+  });
+  $('[data-toggle="popover"]').click(function() {
+    $('[data-toggle="popover"]').not(this).popover('hide'); //all but this
+  });
 })
 
