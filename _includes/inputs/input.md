@@ -24,7 +24,7 @@
 	</select>
 {% elsif param[1].type == 'number' %}
 	<div class="form-group">
-	 	<input id="{{param[0]}}" min="{{param[1].min}}" 
+	 	<input id="{{param[0]}}" min="{{param[1].min}}"
 	 		max="{{param[1].max}}" class="form-control" type="number"/>
  		<input id="{{param[0]}}" min="{{param[1].min}}"
 	 		max="{{param[1].max}}" type="range"/>

@@ -1,0 +1,24 @@
+pump:
+  title: Pumps 
+fan:
+  title: Fans 
+conveyor:
+  title: Conveyor 
+extruder:
+  title: TBD 
+wind:
+  title: TBD 
+tidal:
+  title: TBD 
+winch:
+  title: TBD 
+kiln:
+  title: TBD 
+stirrer:
+  title: TBD 
+elevator:
+  title: TBD 
+compressor:
+  title: TBD 
+ship:
+  title: TBD 
