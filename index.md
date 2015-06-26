@@ -3,7 +3,7 @@ layout: default
 ---
 # Welcome to Drive Contructor!
 
-## List of applicaitons
+## Choose your application
 
 <div class="container">
 {% for app in site.data.applications %}
