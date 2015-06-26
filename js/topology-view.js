@@ -29,7 +29,7 @@ var app = app || {};
         function(value, key) {
           _.each(value, function(paramValue, paramName) {
             var param = $('[data-element-form="' + key + '"]')
-              .find('#' + paramName);
+              .find('[id=' + paramName + "]");
             if (paramValue == null 
                 && param.prop("tagName") === 'SELECT') {
               paramValue = '<any>';

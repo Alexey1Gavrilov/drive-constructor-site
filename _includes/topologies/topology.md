@@ -29,7 +29,7 @@
 {% for e in topology.elements %}
   <div id="element-form-{{e}}" hidden data-element-form="{{e}}">
   {% include topologies/element-form.md element=e %}
-  </div>
+  </div><!-- end form -->
 {% endfor %}
 </div>
 {% endif %}

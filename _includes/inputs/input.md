@@ -2,7 +2,7 @@
 [More info...](/help/{{include.element}}/{{param[0]}}.html)
 {% endcapture %}
 {% assign param=site.data.elements[page.element][include.param] %}
-<div class="col-xs-6 col-md-3 form-group">
+<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 form-group">
 <label 
 	class="text-info label-link"
 	data-toggle="popover"
@@ -22,6 +22,13 @@
 		{% endif %}
 	{% endfor %}
 	</select>
+{% elsif param[1].type == 'number' %}
+	<div class="form-group">
+	 	<input id="{{param[0]}}" min="{{param[1].min}}" 
+	 		max="{{param[1].max}}" class="form-control" type="number"/>
+ 		<input id="{{param[0]}}" min="{{param[1].min}}"
+	 		max="{{param[1].max}}" type="range"/>
+ 	</div>
 {% else %}
  	<input id="{{param[0]}}" class="form-control" type="{{param[1].type}}"/>
 {% endif %}

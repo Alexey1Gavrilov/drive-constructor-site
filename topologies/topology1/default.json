@@ -5,7 +5,7 @@
       "type": "CENTRIFUGAL",
       "head": 100.00,
       "flow": 50.00,
-      "ratedEfficiency": 0.81,
+      "ratedEfficiency": 81.00,
       "ratedSpeed": 1450.00,
       "fluidDensity": 1000.00,
       "startingTorque": 0.00,

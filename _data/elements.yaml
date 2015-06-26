@@ -8,31 +8,45 @@ pump:
       dolore magna aliqua. Ut enim ad minim veniam
     values: ["CENTRIFUGAL", "PERIPHERAL", "SPECIAL",
         "RECIPROCATING", "BLOW_CASE", "ROTARY"]
+    default:
+      toplogy1: CENTRIFUGAL
   head:
     type: number
     label: Head
+    min: 0
+    max: 1000
     content: >
       Sed ut <b>perspiciatis</b> "unde" omnis iste 
       natus error sit voluptatem accusantium 
       doloremque laudantium
-    default:
-      toplogy1: CENTRIFUGAL
+
   flow:
     type: number
     label: Flow
+    min: 0
+    max: 500
+
   ratedEfficiency:
     type: number
     label: Rated efficiency
+    min: 0
+    max: 100
+
   ratedSpeed:
     type: number
     label: Rated speed
+    min: 1
+    max: 10000
+
   fluidDensity:
     type: number
     label: Fluid density
+    min: 500
+    max: 3200
+    
   startingTorque:
     type: number
     label: Starting torque
-
 motor:
   type:
     type: select
