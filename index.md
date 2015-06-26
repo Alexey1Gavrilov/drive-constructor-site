@@ -17,5 +17,3 @@ layout: default
 </div>
 {% endfor %}
 </div>
-- [Pumps](/applications/pumps.html)
-- [Conveyers](/applications/conveyers.html)
