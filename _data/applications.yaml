@@ -1,5 +1,6 @@
 pump:
-  title: Pumps 
+  title: Pumps
+  text: Systems for driving pumps
 fan:
   title: Fans 
 conveyor:

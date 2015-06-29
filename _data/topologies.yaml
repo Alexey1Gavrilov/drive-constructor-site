@@ -1,12 +1,29 @@
 topology1:
-  title: Topology1
-  elements: ["pump", "motor", "cable"]
+  title: Drive train with just FC
+  elements: ["pump", "motor", "cable", "converter", "grid"]
   applications: ["pumps"]
+  text: > 
+    This simple system topology can be used when it is possible
+    to find a motor matching speed of the pump and when both, the
+    motor and the frequency converter (FC), have similar voltage
+    rating to that of the supply network (the grid). The FC provides
+    full motor and pump controlability and protection. The switch is
+    usually just manual connector, though in certain cases it can be a
+    circuit braker.
 
 topology2:
-  title: Topology2
-  elements: ["pump", "motor", "cable", "motor"]
+  title: Drive train with FC and transformer
+  elements: ["pump", "motor", "cable", "converter", "trafo", "grid"]
   applications: ["pumps"]
+  text: >
+    This system topology can be used when it is possible to find
+    a motor matching speed of the pump and when both, the motor and
+    the frequency converter (FC), have much lower voltage than voltage
+    of the supply network and transformer is needed to match the
+    voltages. The FC provides full motor and pump controlability and
+    protection. The switch is usually just manual connector, though in
+    certain cases it can be a circuit braker.
+
 
 topology3:
   title: Topology3

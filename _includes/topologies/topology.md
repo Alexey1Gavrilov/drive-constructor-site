@@ -7,6 +7,10 @@
 ## {{topology.title}}
 {% endif %}
 
+<p>
+{{topology.text}}
+</p>
+
 <div class="btn-group btn-group-border" role="group">
 {% for e in topology.elements %}
  	<div id="element-button-{{e}}"
