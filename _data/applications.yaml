@@ -5,9 +5,9 @@ fan:
 conveyor:
   title: Conveyor 
 extruder:
-  title: TBD 
+  title: Extruder 
 wind:
-  title: TBD 
+  title: Wind turbine
 tidal:
   title: TBD 
 winch:
