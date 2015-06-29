@@ -9,16 +9,16 @@ extruder:
 wind:
   title: Wind turbine
 tidal:
-  title: TBD 
+  title: Tidal turbine 
 winch:
-  title: TBD 
+  title: Winch 
 kiln:
-  title: TBD 
+  title: Kiln 
 stirrer:
-  title: TBD 
+  title: Stirrer 
 elevator:
-  title: TBD 
+  title: Elevator 
 compressor:
-  title: TBD 
+  title: Compressor 
 ship:
-  title: TBD 
+  title: Ship 
