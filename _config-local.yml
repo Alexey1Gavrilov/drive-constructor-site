@@ -4,6 +4,7 @@ email: info@driveconstructor.com
 baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://staging.driveconstructor.com" # the base hostname & protocol for your site
 apiUrl: "http://localhost:8080/api"
+exclude: ["build"]
 
 # Build settings
 markdown: kramdown
