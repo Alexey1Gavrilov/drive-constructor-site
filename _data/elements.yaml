@@ -3,7 +3,7 @@ pump:
     type: select
     label: Type
     content: >
-      Super pump
+      There are many different types of pumps, each type having own load characteristic
     values: ["CENTRIFUGAL", "PERIPHERAL", "SPECIAL",
         "RECIPROCATING", "BLOW_CASE", "ROTARY"]
     default:
@@ -14,9 +14,7 @@ pump:
     min: 0
     max: 1000
     content: >
-      Sed ut <b>perspiciatis</b> "unde" omnis iste 
-      natus error sit voluptatem accusantium 
-      doloremque laudantium
+      Head is height of the water column
 
   flow:
     type: number
