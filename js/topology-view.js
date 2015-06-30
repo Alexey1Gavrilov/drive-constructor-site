@@ -37,7 +37,7 @@ var app = app || {};
             param.val(paramValue);
           });
         });
-      $('#save-button').prop('disabled', !this.model.hasChanged());
+        $('#save-button').prop('disabled', !this.model.hasChanged());
     }
   });
 })();

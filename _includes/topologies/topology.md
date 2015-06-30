@@ -32,6 +32,27 @@
   {% include topologies/element-form.md element=e %}
   </div><!-- end form -->
 {% endfor %}
+	<div id="result" class="hidden container row">
+
+	<h3>Result</h3>
+	
+	<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	</p>
+
+		<div class="row">
+			<div class="col-xs-6 col-md-6">
+				<div class="thumbnail">
+					<img src="/images/result1.png"/>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-6">
+				<div class="thumbnail">
+					<img src="/images/result2.png"/>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="pull-right">
 	<button id="save-button" onClick="app.saveSystem()" 

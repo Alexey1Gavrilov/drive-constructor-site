@@ -41,9 +41,11 @@
   text-decoration: underline;
 }
 
-.container {
-  width: 940px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+@media (min-width: 1200px) {
+  .container {
+    width: 940px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

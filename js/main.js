@@ -32,7 +32,9 @@ app.saveSystem = function() {
     error: app.onError,
     
     success: function() {
+      $('#result').removeClass('hidden');
       $('#save-button').prop('disabled', true);
+      app.selectTopologyElement();
     }
   });  
 }
@@ -45,6 +47,10 @@ app.getCurrentTopologyUrl = function() {
 }
 
 app.selectTopologyElement = function(topology, element) {
+  if (element != null) {
+    $('#save-button').prop('disabled', false);
+    $('#result').addClass('hidden');;
+  }
   app.activeElement = element; 
   $('div[data-element-form]').each(function(index, e) {
     var el = $(e);
