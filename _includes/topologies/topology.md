@@ -24,9 +24,6 @@
 
 {% if include.disabled == null %}
 
-<button id="save-button" onClick="app.saveSystem()" class="btn-primary btn">Save</button>
-<button id="reset-button" onClick="app.resetSystem()" class="btn-primary btn">Reset</button>
-
 <div id='alert-placeholder'></div>
 
 <div id="element-form">
@@ -35,5 +32,11 @@
   {% include topologies/element-form.md element=e %}
   </div><!-- end form -->
 {% endfor %}
+</div>
+<div class="pull-right">
+	<button id="save-button" onClick="app.saveSystem()" 
+			class="btn-primary btn">Calculate</button>
+	<button id="reset-button" onClick="app.resetSystem()"
+			class="btn-primary btn">Reset</button>
 </div>
 {% endif %}

@@ -2,7 +2,7 @@
 [More info...](/help/{{include.element}}/{{param[0]}}.html)
 {% endcapture %}
 {% assign param=site.data.elements[page.element][include.param] %}
-<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 form-group">
+<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 form-group">
 <label 
 	class="text-info label-link"
 	data-toggle="popover"
