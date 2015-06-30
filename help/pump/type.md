@@ -2,9 +2,10 @@
 layout: default
 ---
 
-# Pump type
+# Pump types
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Mechanical pumps may be submerged in the fluid they are pumping or be placed external to the fluid.
+Pumps can be classified by their method of displacement into positive displacement pumps, impulse pumps, velocity pumps, gravity pumps, steam pumps and valveless pumps. There are two basic types of pumps: positive displacement and centrifugal. Although axial-flow pumps are frequently classified as a separate type, they have essentially the same operating principles as centrifugal pumps. 
 
 ![A pump](http://placehold.it/350x150)
 
