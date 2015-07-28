@@ -49,7 +49,7 @@ app.getCurrentTopologyUrl = function() {
 app.selectTopologyElement = function(topology, element) {
   if (element != null) {
     $('#save-button').prop('disabled', false);
-    $('#result').addClass('hidden');;
+    $('#result').addClass('hidden');
   }
   app.activeElement = element; 
   $('div[data-element-form]').each(function(index, e) {

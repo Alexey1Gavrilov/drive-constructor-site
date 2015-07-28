@@ -1,5 +1,5 @@
 {
-  "type": "Topology1",
+  "type": "PumpFcTopology",
   "elements": {
     "pump": {
       "type": "CENTRIFUGAL",

@@ -1,4 +1,4 @@
-topology1:
+pump_fc:
   title: Drive train with just FC
   elements: ["pump", "motor", "cable", "converter", "grid"]
   applications: ["pumps"]
@@ -11,7 +11,7 @@ topology1:
     usually just manual connector, though in certain cases it can be a
     circuit braker.
 
-topology2:
+pump_fc_tr:
   title: Drive train with FC and transformer
   elements: ["pump", "motor", "cable", "converter", "trafo", "grid"]
   applications: ["pumps"]
@@ -24,8 +24,7 @@ topology2:
     protection. The switch is usually just manual connector, though in
     certain cases it can be a circuit braker.
 
-
-topology3:
+pump_sft_tr_by:
   title: Topology3
   elements: ["pump", "motor", "cable", "motor"]
   applications: ["conveyers"]
