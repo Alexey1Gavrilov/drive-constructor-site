@@ -13,21 +13,18 @@
 	{% if param[1].any %}
 		<option value="<any>">(any)</option>
 	{% endif %}
-	{% for value in param[1].values %}
-		{% if param[1].options %}
-		{% assign index = forloop.index | minus: 1 %}
-		<option value="{{value}}">{{param[1].options[index]}}</option> 
-		{% else %}
-		<option value="{{value}}">{{value}}</option>
-		{% endif %}
-	{% endfor %}
+	{% if param[1].interval %}
+		{% include inputs/input-select-interval.md param=param %}
+  {% else %}
+    {% include inputs/input-select-values.md param=param %}
+	{% endif %}
 	</select>
 {% elsif param[1].type == 'number' %}
 	<div class="form-group">
 	 	<input id="{{param[0]}}" min="{{param[1].min}}"
 	 		max="{{param[1].max}}" class="form-control" type="number"/>
  		<input id="{{param[0]}}" min="{{param[1].min}}"
-	 		max="{{param[1].max}}" type="range"/>
+	 		max="{{param[1].max}}" type="range" step="{{param[1].step}}"/>
  	</div>
 {% else %}
  	<input id="{{param[0]}}" class="form-control" type="{{param[1].type}}"/>

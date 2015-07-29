@@ -6,11 +6,9 @@ pump:
       There are many different types of pumps, each type having own load characteristic
     values: ["CENTRIFUGAL", "PERIPHERAL", "SPECIAL",
         "RECIPROCATING", "BLOW_CASE", "ROTARY"]
-    default:
-      toplogy1: CENTRIFUGAL
   head:
     type: number
-    label: Head
+    label: Head (m)
     min: 0
     max: 1000
     content: >
@@ -18,54 +16,69 @@ pump:
 
   flow:
     type: number
-    label: Flow
+    label: Flow (l/s)
     min: 0
     max: 500
 
   ratedEfficiency:
     type: number
-    label: Rated efficiency
+    label: Rated efficiency (%)
     min: 0
     max: 100
 
   ratedSpeed:
     type: number
-    label: Rated speed
+    label: Rated speed (rpm)
     min: 1
     max: 10000
 
   fluidDensity:
-    type: number
+    type: select
     label: Fluid density
-    min: 500
-    max: 3200
+    values: [1000, 920, 820, 1035, 1025, 720]
+    options: ["water", "average oil", "kerosene",
+        "milk", "sea water", "gasoline"]
     
   startingTorque:
-    type: number
-    label: Starting torque
+    type: select
+    label: Starting torque as *T_rated
+    interval:
+      from: 0
+      to: 20
+      mod: "10.00"
+
 motor:
   type:
     type: select
     label: Type
-    values: ["SCIM", "PMSM", "SYRM",
-        "FWSM", "DFIM"]
+    values: ["SCIM", "PMSM", "SYRM", "FWSM", "DFIM"]
+
   ratedPower:
     type: number
-    label: Rated power
+    label: Rated power (kW)
+    min: 0
+    max: 10000
+
+  ratedVoltageYRange:
+    type: select
+    label: Rated volatage Y
+    any: true
+    values: ["200-240", "380-440", "460-500", "550-600", "660-690", 
+          "2200-2400", "3000-3300", "4100-4200", 
+          "6000-6600", "10000-11000"]
+
   explosionProtection:
     type: text
     label: Explosion protection
+
   coolantTemperature:
     type: number
     label: Coolant temperature
-  ratedVoltageY:
-    type: number
-    label: Rated volatage Y
+
   cooling:
     type: select
     any: true
     label: Cooling
     values: ["AIR", "WATER", "IC411",
         "IC71W", "IC01", "IC611", "IC81W", "IC31"]
-    options: ["air", "water", "IC 411",
-        "IC 71W", "IC 01", "IC 611", "IC 81W", "IC 31"]
+
