@@ -12,11 +12,10 @@
       "powerOnShaft": 60.56
     },
     "motor": {
-      "components": [],
       "type": "SCIM",
       "ratedPower": 75.00,
-      "ratedVoltageYRange": "380-440",
-      "ratedVoltageY": 960.00,
+      "ratedVoltageYMin": 380,
+      "ratedVoltageYMax": 440,
       "cooling": "IC411",
       "ipClass": "IP55",
       "shaftHeight": 132.00,
