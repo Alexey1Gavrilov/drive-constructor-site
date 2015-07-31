@@ -39,12 +39,14 @@ app.loadSystem = function(callback) {
           model: system
         });
         var e = Object.keys(system.get('topology.elements'))[0];
+        var topology = null;
         var pattern = new UrlPattern('*/topologies/:topology/index.html#:element');
         var match = pattern.match(window.location.href);
-        if (match.element) {
+        if (match) {
           e = match.element;
+          topology = match.topology;
         }
-        app.selectTopologyElement(match.topology, e)
+        app.selectTopologyElement(topology, e)
       });
     }
   };
