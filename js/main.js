@@ -68,6 +68,7 @@ app.selectTopologyElement = function(topology, element) {
       el.removeClass('active')
     }
   });
+  window.location.hash = element;
 }
 
 app.spinner = new Spinner().spin();
@@ -80,5 +81,3 @@ $.ajaxSetup({
   //	app.spinner.stop();
   }
 });
-
-
