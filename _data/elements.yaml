@@ -66,6 +66,19 @@ motor:
     values: ["200-240", "380-440", "460-500", "550-600", "660-690", 
           "2200-2400", "3000-3300", "4100-4200", 
           "6000-6600", "10000-11000"]
+  
+  ratedSynchronousSpeedAtFrequency:
+    type: select
+    label: Rated synchronous speed
+    any: true
+    values: ["1000@50 Hz", "1200@60 Hz", "1500@50 Hz",
+        "1800@60 Hz", "3000@50 Hz", "3600@60 Hz"]
+
+  altitude:
+    type: number
+    label: Altitude (m)
+    min: 0
+    max: 5000
 
   explosionProtection:
     type: text

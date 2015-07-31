@@ -16,6 +16,9 @@
       "ratedPower": 75.00,
       "ratedVoltageYMin": 380,
       "ratedVoltageYMax": 440,
+      "ratedSynchronousSpeed": 1000,
+      "ratedFrequency": 50,
+      "altitude": 1000,
       "cooling": "IC411",
       "ipClass": "IP55",
       "shaftHeight": 132.00,
@@ -24,7 +27,6 @@
       "mounting": null,
       "insulationClass": "F",
       "frameMaterial": "STEEL",
-      "altitude": 1000.00,
       "ambientTemperature": 30.00
     }
   }

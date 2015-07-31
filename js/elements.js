@@ -40,8 +40,24 @@ app.elementUtils = {
       fromInputValue: function(element, param, paramName, paramValue) {
         var result = {};
         var array = paramValue.split('-');
-        result['ratedVoltageYMin'] = array[0];
-        result['ratedVoltageYMax'] = array[1];
+        result['ratedVoltageYMin'] = Number(array[0]);
+        result['ratedVoltageYMax'] = Number(array[1]);
+        return result;
+      }
+    },
+
+    ratedSynchronousSpeedAtFrequency: {
+      toInputValue: function(element, param, paramName, paramValue) {
+        var value = element['ratedSynchronousSpeed'] + '@'
+            + element['ratedFrequency'] + ' Hz';
+        return value;
+      },
+
+      fromInputValue: function(element, param, paramName, paramValue) {
+        var result = {};
+        var array = paramValue.split(/[@|\s]/);
+        result['ratedSynchronousSpeed'] = Number(array[0]);
+        result['ratedFrequency'] = Number(array[1]);
         return result;
       }
     }
