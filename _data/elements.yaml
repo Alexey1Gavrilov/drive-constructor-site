@@ -80,6 +80,12 @@ motor:
     min: 0
     max: 5000
 
+  ambientTemperature:
+    type: number
+    label: Ambient temperature (d.C.)
+    min: 0
+    max: 60
+
   explosionProtection:
     type: text
     label: Explosion protection

@@ -3,17 +3,17 @@
   "elements": {
     "pump": {
       "type": "CENTRIFUGAL",
-      "head": 100.00,
-      "flow": 50.00,
-      "ratedEfficiency": 81.00,
-      "ratedSpeed": 1450.00,
-      "fluidDensity": 1000.00,
-      "startingTorque": 0.00,
+      "head": 100,
+      "flow": 50,
+      "ratedEfficiency": 81,
+      "ratedSpeed": 1450,
+      "fluidDensity": 1000,
+      "startingTorque": 0,
       "powerOnShaft": 60.56
     },
     "motor": {
       "type": "SCIM",
-      "ratedPower": 75.00,
+      "ratedPower": 75,
       "ratedVoltageYMin": 380,
       "ratedVoltageYMax": 440,
       "ratedSynchronousSpeed": 1000,
@@ -21,13 +21,13 @@
       "altitude": 1000,
       "cooling": "IC411",
       "ipClass": "IP55",
-      "shaftHeight": 132.00,
+      "shaftHeight": 132,
       "explosionProtection": "Ex D",
-      "coolantTemperature": 30.00,
+      "coolantTemperature": 30,
       "mounting": null,
       "insulationClass": "F",
       "frameMaterial": "STEEL",
-      "ambientTemperature": 30.00
+      "ambientTemperature": 30
     }
   }
 }
