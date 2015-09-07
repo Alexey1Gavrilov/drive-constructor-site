@@ -23,11 +23,11 @@
       "ipClass": "IP55",
       "shaftHeight": 132,
       "explosionProtection": "Ex D",
-      "coolantTemperature": 30,
+      "coolantTemperature": 50,
       "mounting": null,
       "insulationClass": "F",
       "frameMaterial": "STEEL",
-      "ambientTemperature": 30
+      "ambientTemperature": 40
     }
   }
 }

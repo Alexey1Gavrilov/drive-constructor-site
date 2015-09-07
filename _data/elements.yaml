@@ -88,7 +88,7 @@ motor:
   
   coolantTemperature:
     type: number
-    label: Coolant temperature (d. C.)
+    label: Coolant temperature (d.C.)
 
   explosionProtection:
     type: text
@@ -100,4 +100,10 @@ motor:
     label: Cooling
     values: ["AIR", "WATER", "IC411",
         "IC71W", "IC01", "IC611", "IC81W", "IC31"]
+  
+  efficiencyClass:
+    type: select
+    any: true
+    label: Efficiency class
+    values: ["IE2", "IE3", "IE4"]
 
