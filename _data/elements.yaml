@@ -85,14 +85,14 @@ motor:
     label: Ambient temperature (d.C.)
     min: 0
     max: 60
+  
+  coolantTemperature:
+    type: number
+    label: Coolant temperature (d. C.)
 
   explosionProtection:
     type: text
     label: Explosion protection
-
-  coolantTemperature:
-    type: number
-    label: Coolant temperature
 
   cooling:
     type: select
