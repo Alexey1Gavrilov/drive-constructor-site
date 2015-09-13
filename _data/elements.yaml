@@ -107,3 +107,9 @@ motor:
     label: Efficiency class
     values: ["IE2", "IE3", "IE4"]
 
+  mounting:
+    type: select
+    label: Mounting variant
+    any: true
+    values: ["B3", "B5", "B35"]
+    options: ["foot (B3)", "flange (B5)", "foot+flange (B35)"]

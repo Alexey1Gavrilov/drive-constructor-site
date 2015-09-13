@@ -9,7 +9,7 @@
 	data-content="{{param[1].content | xml_escape}}{{more_info | markdownify | xml_escape}}"
 	data-html="true" data-title="{{param[1].label}}">{{param[1].label}}:</label>
 {% if param[1].type == 'select' %}
-	<select id="{{param[0]}}" class="form-control">
+	<select id="{{param[0]}}" class="form-control" {{param[1].attributes}}>
 	{% if param[1].any %}
 		<option value="<any>">(any)</option>
 	{% endif %}

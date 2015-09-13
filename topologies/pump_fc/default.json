@@ -24,7 +24,7 @@
       "shaftHeight": 132,
       "explosionProtection": "Ex D",
       "coolantTemperature": 50,
-      "mounting": null,
+      "mounting": "B3",
       "insulationClass": "F",
       "frameMaterial": "STEEL",
       "ambientTemperature": 40
