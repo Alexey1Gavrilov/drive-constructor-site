@@ -8,6 +8,8 @@
   </div> <!-- end row -->
   {% endif %}
 {% endfor %}
-{% if site.data.elements contains include.element && loopindex != 0 %}
+{% if site.data.elements contains include.element %}
+{% if loopindex != 0 %}
 </div> <!-- end row after for -->
+{% endif %}
 {% endif %}

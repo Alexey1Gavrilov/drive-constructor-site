@@ -90,10 +90,6 @@ motor:
     type: number
     label: Coolant temperature (d.C.)
 
-  explosionProtection:
-    type: text
-    label: Explosion protection
-
   cooling:
     type: select
     any: true
@@ -113,3 +109,15 @@ motor:
     any: true
     values: ["B3", "B5", "B35"]
     options: ["foot (B3)", "flange (B5)", "foot+flange (B35)"]
+
+  ipClass:
+    type: select
+    label: Protection
+    any: true
+    values: ["IP23", "IP44", "IP54", "IP55", "IP24W"]
+
+  explosionProtection:
+    type: select
+    label: Explosion protection
+    any: true
+    values: ["Ex", "Exe", "ExD"]
