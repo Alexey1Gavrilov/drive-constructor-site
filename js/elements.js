@@ -3,7 +3,7 @@ var app = app || {};
 app.elementUtils = {
 
   toInputValue: function(element, param, paramName) {
-    if (app.elementUtils.custom[paramName]) {
+    if (app.elementUtils.custom[paramName] && app.elementUtils.custom[paramName].toInputValue) {
       return app.elementUtils.custom[paramName].toInputValue(element, param, paramName);
     }
     var paramValue = element[paramName];
@@ -19,7 +19,7 @@ app.elementUtils = {
     if (paramValue === '<any>') {
       result[paramName] = null;
     }
-    if (app.elementUtils.custom[paramName]) {
+    if (app.elementUtils.custom[paramName] && app.elementUtils.custom[paramName].fromInputValue) {
       return app.elementUtils.custom[paramName].fromInputValue(
           element,
           param,
@@ -28,6 +28,12 @@ app.elementUtils = {
     }
     result[paramName] = paramValue;
     return result;
+  },
+
+   renderParam: function(element, param, paramName) {
+    if (app.elementUtils.custom[paramName] && app.elementUtils.custom[paramName].renderParam) {
+      return app.elementUtils.custom[paramName].renderParam(element, param);
+    }
   },
 
   custom: {
@@ -59,6 +65,16 @@ app.elementUtils = {
         result['ratedSynchronousSpeed'] = Number(array[0]);
         result['ratedFrequency'] = Number(array[1]);
         return result;
+      }
+    },
+
+    coolantTemperature: {
+      renderParam: function(element, div) {
+        if (element['cooling'] === 'AIR') {
+          div.hide();
+        } else {
+          div.show();
+        }
       }
     }
   }

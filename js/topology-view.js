@@ -41,6 +41,13 @@ var app = app || {};
                 paramName); 
           $(input).val(paramValue);
         });
+        $(object).find('div[id="element-param"]').each(function(j, div) {
+          var paramName = $(div).data('param');
+          app.elementUtils.renderParam(
+                elements[element],
+                $(div),
+                paramName);
+        });
       });
       $('#save-button').prop('disabled', !this.model.hasChanged());
     }
