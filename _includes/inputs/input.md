@@ -10,8 +10,8 @@
 	data-html="true" data-title="{{param[1].label}}">{{param[1].label}}:</label>
 {% if param[1].type == 'select' %}
 	<select id="{{param[0]}}" class="form-control" {{param[1].attributes}}>
-	{% if param[1].any %}
-		<option value="<any>">(any)</option>
+	{% if param[1].nullValue %}
+		<option value="@null@">{{param[1].nullValue}}</option>
 	{% endif %}
 	{% if param[1].interval %}
 		{% include inputs/input-select-interval.md param=param %}

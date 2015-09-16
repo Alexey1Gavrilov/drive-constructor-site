@@ -62,7 +62,7 @@ motor:
   ratedVoltageYRange:
     type: select
     label: Rated volatage Y
-    any: true
+    nullValue: "&lt;any&gt;"
     values: ["200-240", "380-440", "460-500", "550-600", "660-690", 
           "2200-2400", "3000-3300", "4100-4200", 
           "6000-6600", "10000-11000"]
@@ -70,7 +70,7 @@ motor:
   ratedSynchronousSpeedAtFrequency:
     type: select
     label: Rated synchronous speed
-    any: true
+    nullValue: "&lt;any&gt;"
     values: ["1000@50 Hz", "1200@60 Hz", "1500@50 Hz",
         "1800@60 Hz", "3000@50 Hz", "3600@60 Hz"]
 
@@ -92,32 +92,39 @@ motor:
 
   cooling:
     type: select
-    any: true
+    nullValue: "&lt;any&gt;"
     label: Cooling
     values: ["AIR", "WATER", "IC411",
         "IC71W", "IC01", "IC611", "IC81W", "IC31"]
   
   efficiencyClass:
     type: select
-    any: true
+    nullValue: "&lt;any&gt;"
     label: Efficiency class
     values: ["IE2", "IE3", "IE4"]
 
   mounting:
     type: select
     label: Mounting variant
-    any: true
+    nullValue: "&lt;any&gt;"
     values: ["B3", "B5", "B35"]
     options: ["foot (B3)", "flange (B5)", "foot+flange (B35)"]
 
   ipClass:
     type: select
     label: Protection
-    any: true
+    nullValue: "&lt;any&gt;"
     values: ["IP23", "IP44", "IP54", "IP55", "IP24W"]
 
   explosionProtection:
     type: select
     label: Explosion protection
-    any: true
+    nullValue: "&lt;no&gt;"
     values: ["Ex", "Exe", "ExD"]
+
+  insulationClass:
+    type: select
+    label: Insulation
+    nullValue: "&lt;any&gt;"
+    values: ["B", "H", "F"]
+
