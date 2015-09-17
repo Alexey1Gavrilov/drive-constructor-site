@@ -128,3 +128,16 @@ motor:
     nullValue: "&lt;any&gt;"
     values: ["B", "H", "F"]
 
+  shaftHeight:
+    type: select
+    label: Shaft height (mm)
+    nullValue: "&lt;any&gt;"
+    values: [56, 63, 71, 80, 90, 100, 112, 132, 160, 180, 200, 
+        225, 250, 280, 315, 355, 400, 450, 500, 560, 630, 710]
+
+  frameMaterial:
+    type: select
+    label: Frame material
+    nullValue: "&lt;any&gt;"
+    values: ["STEEL", "ALUMINUM", "CAST_IRON"]
+    options: ["steel", "aluminum", "cast iron"]
