@@ -28,6 +28,16 @@
       "insulationClass": "F",
       "frameMaterial": "STEEL",
       "ambientTemperature": 40
+    },
+    "cable": {
+      "type": "THREE_PH_STRANDED_INS",
+      "length": 30,
+      "areaConductor": 180,
+      "material": "COPPER",
+      "temperature": 100,
+      "condScreen": 1,
+      "er": 3.5,
+      "k": 0.054
     }
   }
 }
