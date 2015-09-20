@@ -146,7 +146,7 @@ cable:
   type:
     type: select
     label: Type
-    values: ["THREE_PH_STRANDED_INS", "THREE_PH_SOLID3"]
+    values: ["_3PH_STRANDED_INS", "_3PH_SOLID"]
     options: ["3 ph. stranded, ins.", "3 ph. sold"]
 
   length:
@@ -184,4 +184,19 @@ cable:
   k:
     type: number
     label: Coeff K
+
+converter:
+  type:
+    type: select
+    label: Type
+    nullValue: "&lt;any&gt;"
+    options: ["2Q_2L_VSC", "2Q_3L_NPC_VSC", "2Q_4L_FLC_VSC",
+        "2Q_5L_ANPC", "4Q_2L_VSC", "4Q_3L_NPC_VSC",
+        "4Q_4L_FLC_VSC", "4Q_5L_ANPC", "ML_SCHB_VSC", "CSI", "LCI",
+        "CC"]
+    values: ["_2Q_2L_VSC", "_2Q_3L_NPC_VSC", "_2Q_4L_FLC_VSC",
+        "_2Q_5L_ANPC", "_4Q_2L_VSC", "_4Q_3L_NPC_VSC",
+        "_4Q_4L_FLC_VSC", "_4Q_5L_ANPC", "ML_SCHB_VSC", "CSI", "LCI",
+        "CC"]
+
 

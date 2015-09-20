@@ -30,7 +30,7 @@
       "ambientTemperature": 40
     },
     "cable": {
-      "type": "THREE_PH_STRANDED_INS",
+      "type": "_3PH_STRANDED_INS",
       "length": 30,
       "areaConductor": 180,
       "material": "COPPER",
@@ -38,6 +38,12 @@
       "condScreen": 1,
       "er": 3.5,
       "k": 0.054
+    },
+    "converter": {
+      "type": "_2Q_2L_VSC",
+      "coolantTemperature": 50,
+      "ambientTemperature": 40,
+      "altitude": 1000
     }
   }
 }
