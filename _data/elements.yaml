@@ -199,4 +199,39 @@ converter:
         "_4Q_4L_FLC_VSC", "_4Q_5L_ANPC", "ML_SCHB_VSC", "CSI", "LCI",
         "CC"]
 
+  gridFilter:
+    type: select
+    label: Grid filter
+    nullValue: "&lt;any&gt;"
+    options: ["no", "choke", "sin"]
+    values: ["NO", "CHOKE", "SIN"]
+
+  machineSideFilter:
+    type: select
+    label: Machine side filter
+    nullValue: "&lt;any&gt;"
+    options: ["no", "du/dt", "sin"]
+    values: ["NO", "DU_DT", "SIN"]
+
+  ipClass:
+    type: select
+    label: Protection
+    nullValue: "&lt;any&gt;"
+    values: ["IP00", "IP21", "IP54"]
+
+  explosionProtection:
+    type: select
+    label: Explosion protection
+    nullValue: "&lt;any&gt;"
+    options: ["no", "Ex", "Exe", "ExD"]
+    values: ["NO", "EX", "EX_E", "EX_D"]
+
+  ratedPower:
+    type: select
+    label: "Rated power (low overload), kW"
+    nullValue: "&lt;any&gt;"
+    values: [1.1, 1.5, 2.2, 3, 4, 5.5, 7.5, 11, 15, 18.5, 22, 30, 37,
+        45, 55, 75, 90, 110, 132, 160, 200, 250, 280, 315, 355, 400,
+        450, 500, 560, 630, 710, 800, 900, 1000, 1250, 1400, 1600,
+        2000, 2500, 3150, 4000]
 

@@ -41,9 +41,14 @@
     },
     "converter": {
       "type": "_2Q_2L_VSC",
+      "gridFilter": "NO",
+      "machineSideFilter": "NO",
       "coolantTemperature": 50,
       "ambientTemperature": 40,
-      "altitude": 1000
+      "altitude": 1000,
+      "ipClass": "IP21",
+      "explosionProtection": "EX_D",
+      "ratedPower": 200
     }
   }
 }
