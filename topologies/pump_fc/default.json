@@ -48,7 +48,11 @@
       "altitude": 1000,
       "ipClass": "IP21",
       "explosionProtection": "EX_D",
-      "ratedPower": 200
+      "ratedPower": 200,
+      "gridSideVoltageMin": 380,
+      "gridSideVoltageMax": 550,
+      "machineSideVoltageMin": 380,
+      "machineSideVoltageMax": 550
     }
   }
 }

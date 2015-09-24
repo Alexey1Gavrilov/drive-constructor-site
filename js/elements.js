@@ -3,31 +3,34 @@ var app = app || {};
 app.elementUtils = {
 
   toInputValue: function(element, param, paramName) {
-    var paramValue = element[paramName];
-    if (paramValue == null 
-        && param.prop("tagName") === 'SELECT') {
+    var paramValue = this.isCustomized(paramName) 
+        ? app.elementUtils.custom[paramName].toInputValue(
+              element,
+              param,
+              paramName)
+        : element[paramName];
+    if (paramValue == null && param.prop('tagName') === 'SELECT') {
       return '@null@';
     }
     return paramValue;
-    if (app.elementUtils.custom[paramName] && app.elementUtils.custom[paramName].toInputValue) {
-      return app.elementUtils.custom[paramName].toInputValue(element, param, paramName);
-    }
+  },
+
+  isCustomized: function(paramName) {
+    return app.elementUtils.custom[paramName]
+        && app.elementUtils.custom[paramName].toInputValue;
   },
 
   fromInputValue: function(element, param, paramName, paramValue) {
-    var result = {};
-    if (paramValue === '@null@') {
+    if (paramValue === '@null@' && $(param).prop('tagName') === 'SELECT') {
       paramValue = null;
     }
-    if (app.elementUtils.custom[paramName] && app.elementUtils.custom[paramName].fromInputValue) {
-      return app.elementUtils.custom[paramName].fromInputValue(
-          element,
-          param,
-          paramName,
-          paramValue);
-    }
-    result[paramName] = paramValue;
-    return result;
+    return this.isCustomized(paramName)
+        ? app.elementUtils.custom[paramName].fromInputValue(
+              element,
+              param,
+              paramName,
+              paramValue)
+        : paramValue;
   },
 
    renderParam: function(element, param, paramName) {
@@ -39,21 +42,63 @@ app.elementUtils = {
   custom: {
     ratedVoltageYRange: {
       toInputValue: function(element, param, paramName, paramValue) {
+        if (!element['ratedVoltageYMin'] || !element['ratedVoltageYMax']) {
+          return null;
+        }
         var value = element['ratedVoltageYMin'] + '-' + element['ratedVoltageYMax'];
         return value;
       },
 
       fromInputValue: function(element, param, paramName, paramValue) {
         var result = {};
-        var array = paramValue.split('-');
-        result['ratedVoltageYMin'] = Number(array[0]);
-        result['ratedVoltageYMax'] = Number(array[1]);
+        var array = paramValue == null ? null : paramValue.split('-');
+        result['ratedVoltageYMin'] = array == null ? null : Number(array[0]);
+        result['ratedVoltageYMax'] = array == null ? null : Number(array[1]);
+        return result;
+      }
+    },
+
+    gridSideVoltageRange: {
+      toInputValue: function(element, param, paramName, paramValue) {
+        if (!element['gridSideVoltageMin'] || !element['gridSideVoltageMax']) {
+          return null;
+        }
+        var value = element['gridSideVoltageMin'] + '-' + element['gridSideVoltageMax'];
+        return value;
+      },
+
+      fromInputValue: function(element, param, paramName, paramValue) {
+        var result = {};
+        var array = paramValue == null ? null : paramValue.split('-');
+        result['gridSideVoltageMin'] = array == null ? null : Number(array[0]);
+        result['gridSideVoltageMax'] = array == null ? null : Number(array[1]);
+        return result;
+      }
+    },
+
+    machineSideVoltageRange: {
+      toInputValue: function(element, param, paramName, paramValue) {
+        if (!element['machineSideVoltageMin'] || !element['machineSideVoltageMax']) {
+          return null;
+        }
+        var value = element['machineSideVoltageMin'] + '-' + element['machineSideVoltageMax'];
+        return value;
+      },
+
+      fromInputValue: function(element, param, paramName, paramValue) {
+        var result = {};
+        var array = paramValue == null ? null : paramValue.split('-');
+        result['machineSideVoltageMin'] = array == null ? null : Number(array[0]);
+        result['machineSideVoltageMax'] = array == null ? null : Number(array[1]);
         return result;
       }
     },
 
     ratedSynchronousSpeedAtFrequency: {
       toInputValue: function(element, param, paramName, paramValue) {
+        if (!element['ratedSynchronousSpeed'] || !element['ratedFrequency']) {
+          return null;
+        }
         var value = element['ratedSynchronousSpeed'] + '@'
             + element['ratedFrequency'] + ' Hz';
         return value;
@@ -61,9 +106,9 @@ app.elementUtils = {
 
       fromInputValue: function(element, param, paramName, paramValue) {
         var result = {};
-        var array = paramValue.split(/[@|\s]/);
-        result['ratedSynchronousSpeed'] = Number(array[0]);
-        result['ratedFrequency'] = Number(array[1]);
+        var array = paramValue == null ? null : paramValue.split(/[@|\s]/);
+        result['ratedSynchronousSpeed'] = array == null ? null : Number(array[0]);
+        result['ratedFrequency'] = array == null ? null : Number(array[1]);
         return result;
       }
     },
