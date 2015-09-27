@@ -45,6 +45,7 @@
       "machineSideFilter": "NO",
       "coolantTemperature": 50,
       "ambientTemperature": 40,
+      "cooling": "WATER",
       "altitude": 1000,
       "ipClass": "IP21",
       "explosionProtection": "EX_D",

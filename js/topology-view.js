@@ -23,10 +23,15 @@ var app = app || {};
         changed.id,
         value);
       var model = this.model;
-      _.each(result, function(v, k) {
+      if (_.isObject(result)) {
+        _.each(result, function(v, k) {
+            model.set('topology.elements.'
+                + app.activeElement + '.' + k, v);
+        });
+      } else {
           model.set('topology.elements.'
-              + app.activeElement + '.' + k, v);
-      });
+                + app.activeElement + '.' + changed.id, result);
+      }
     },
 
     render: function() {
