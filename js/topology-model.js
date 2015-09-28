@@ -2,11 +2,16 @@
 ---
 var app = app || {};
 
+app.parseUrl = function() {
+  var pattern = new UrlPattern('*/topologies/:topology/index.html#/:id/:element');
+  return pattern.match(window.location.href);
+}
+
 app.loadSystem = function(callback) {
-  var id = $.cookie('currentSystemId');
-  if (id) {
+  var match = this.parseUrl();
+  if (match && match.id) {
     app.system = new app.System();
-    app.system.set('id', id);
+    app.system.set('id', match.id);
     app.system.fetch(callback);
   } else {
     var topologyUrl = app.getCurrentTopologyUrl();
@@ -21,15 +26,10 @@ app.loadSystem = function(callback) {
 
 (function() {
   app.System = Backbone.DeepModel.extend({    
-    urlRoot: app.apiUrl +'/systems',
-
-    initialize: function(attributes) {
+    urlRoot: app.apiUrl +'/systems'
+    /*,initialize: function(attributes) {
       this.on('sync', this.storeId);
-    },
-
-    storeId: function(x, y) {
-      $.cookie("currentSystemId", this.get('id'), { expires : 1 });
-    }
+    }*/
   });
   var callback = {
     success: function(system) {
@@ -40,8 +40,7 @@ app.loadSystem = function(callback) {
         });
         var e = Object.keys(system.get('topology.elements'))[0];
         var topology = null;
-        var pattern = new UrlPattern('*/topologies/:topology/index.html#:element');
-        var match = pattern.match(window.location.href);
+        var match = app.parseUrl();
         if (match) {
           e = match.element;
           topology = match.topology;

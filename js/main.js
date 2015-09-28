@@ -11,7 +11,7 @@ app.alertTemplate = _.template([
   '</div>'].join(''));
 
 app.resetSystem = function() {
-  $.removeCookie('currentSystemId');
+  window.location.hash = '';
   location.reload();
 }
 
@@ -68,7 +68,8 @@ app.selectTopologyElement = function(topology, element) {
       el.removeClass('active')
     }
   });
-  window.location.hash = element ? element : '';
+  var id = app.system.get('id');
+  window.location.hash = '/' + id + '/' + (element ? element : '');
 }
 
 app.spinner = new Spinner().spin();
