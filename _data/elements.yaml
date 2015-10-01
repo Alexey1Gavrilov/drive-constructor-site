@@ -276,3 +276,39 @@ converter:
     label: Mounting variant
     nullValue: "&lt;any&gt;"
     values: ["WALL", "FLOOR"]
+
+grid:
+
+  type:
+    type: select
+    label: Grid type
+    values: ["AC_FLOATING"]
+    options: ["AC floating"]
+  
+  frequency:
+    type: select
+    label: Frequency (Hz)
+    values: [50, 60]
+
+  voltage:
+    type:  number
+    label: "Voltage (V)"
+    min: 0
+    max: 13000
+
+  numberOfPhases:
+    type: select
+    label: Number of phases
+    values: [2, 3]
+
+  shortCircuitCurrent:
+    type:  number
+    label: Short-circuit current (kA)
+    min: 0
+    max: 220
+
+  shortCircuitPower:
+    type:  number
+    label: Short-circuit power (kW)
+    min: 0
+    max: 2000

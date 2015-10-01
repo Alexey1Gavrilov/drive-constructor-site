@@ -54,6 +54,14 @@
       "gridSideVoltageMax": 550,
       "machineSideVoltageMin": 380,
       "machineSideVoltageMax": 550
+    },
+    "grid": {
+      "type": "AC_FLOATING",
+      "frequency": 60,
+      "numberOfPhases": 3,
+      "shortCircuitCurrent": 10,
+      "shortCircuitPower": 1000,
+      "voltage": 6000
     }
   }
 }
