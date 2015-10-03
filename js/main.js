@@ -28,6 +28,7 @@ app.onError = function(model, response) {
 }
 
 app.saveSystem = function() {
+  $('#alert-placeholder').find('.alert').alert('close');
   app.system.save({}, {
     error: app.onError,
     
