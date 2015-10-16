@@ -41,6 +41,10 @@ app.saveSystem = function() {
 app.showResult = function() {
   $('#result').removeClass('hidden');
   $('#save-button').prop('disabled', true);
+  var motor = app.system.toJSON().topology.elements.motor;
+  $('textarea[id="motor"]').val(JSON.stringify(motor, null, 2));
+  var converter = app.system.toJSON().topology.elements.converter;
+  $('textarea[id="converter"]').val(JSON.stringify(converter, null, 2));
 },
 
 app.getCurrentTopologyUrl = function() {

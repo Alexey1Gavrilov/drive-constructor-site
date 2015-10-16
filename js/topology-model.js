@@ -3,7 +3,7 @@
 var app = app || {};
 
 app.parseUrl = function() {
-  var pattern = new UrlPattern('*/topologies/:topology/index.html#/:id/:element');
+  var pattern = new UrlPattern('*/topologies/:topology/index.html#:id/:element');
   return pattern.match(window.location.href);
 }
 
