@@ -11,8 +11,7 @@ app.alertTemplate = _.template([
   '</div>'].join(''));
 
 app.resetSystem = function() {
-  window.location.hash = '';
-  location.reload();
+  app.router.navigate('');
 }
 
 app.onError = function(model, response) {
@@ -33,12 +32,16 @@ app.saveSystem = function() {
     error: app.onError,
     
     success: function() {
-      $('#result').removeClass('hidden');
-      $('#save-button').prop('disabled', true);
-      app.selectTopologyElement();
+      app.showResult();
+      app.selectTopologyElement(null, 'result');
     }
   });  
 }
+
+app.showResult = function() {
+  $('#result').removeClass('hidden');
+  $('#save-button').prop('disabled', true);
+},
 
 app.getCurrentTopologyUrl = function() {
 	var path = window.location.pathname.split('/');
@@ -48,9 +51,11 @@ app.getCurrentTopologyUrl = function() {
 }
 
 app.selectTopologyElement = function(topology, element) {
-  if (element != null) {
+  if (element != null && element != 'result') {
     $('#save-button').prop('disabled', false);
     $('#result').addClass('hidden');
+  } else if (element == 'result') {
+    app.showResult();
   }
   app.activeElement = element; 
   $('div[data-element-form]').each(function(index, e) {
@@ -70,7 +75,7 @@ app.selectTopologyElement = function(topology, element) {
     }
   });
   var id = app.system.get('id');
-  window.location.hash = '/' + id + '/' + (element ? element : '');
+  app.router.navigate(id + '/' + (element ? element : ''));
 }
 
 app.spinner = new Spinner().spin();

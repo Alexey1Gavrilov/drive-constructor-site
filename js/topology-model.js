@@ -49,6 +49,20 @@ app.loadSystem = function(callback) {
       });
     }
   };
+
+  var Router = Backbone.Router.extend({
+    routes: {
+      ':systemId/:element': 'elementChanged'
+    },
+
+    elementChanged: function(systemId, element) {
+      if (app.system) {
+        app.selectTopologyElement(null, element);
+      }
+    }
+  });
+  app.router = new Router();
+  Backbone.history.start();
   app.loadSystem(callback);
 })();
 
