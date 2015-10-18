@@ -21,8 +21,17 @@
 	</select>
 {% elsif param[1].type == 'number' %}
 	<div class="form-group">
+    {% if param[1].nullValue %}
+    <div class="input-group">
+      <span class="input-group-addon">
+        <input id="{{param[0]}}-checkbox" type="checkbox" data-param-id="{{param[0]}}" aria-label="..."> any</input>
+      </span>
+    {% endif %}
 	 	<input id="{{param[0]}}" min="{{param[1].min}}"
 	 		max="{{param[1].max}}" class="form-control" type="number"/>
+    {% if param[1].nullValue %}
+    </div>
+    {% endif %}  
  		<input id="{{param[0]}}" min="{{param[1].min}}"
 	 		max="{{param[1].max}}" type="range" step="{{param[1].step}}"/>
  	</div>
