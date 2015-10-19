@@ -11,7 +11,8 @@ app.alertTemplate = _.template([
   '</div>'].join(''));
 
 app.resetSystem = function() {
-  app.router.navigate('');
+  window.location.hash = '';
+  window.location.reload();
 }
 
 app.onError = function(model, response) {

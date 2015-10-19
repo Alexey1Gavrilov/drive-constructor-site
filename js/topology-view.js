@@ -21,7 +21,8 @@ var app = app || {};
         this.model.attributes.topology.elements[app.activeElement],
         evt.currentTarget,
         changed.id,
-        value);
+        value,
+        this.model.defaults);
       var model = this.model;
       if (_.isObject(result)) {
         _.each(result, function(v, k) {
@@ -29,8 +30,9 @@ var app = app || {};
                 + app.activeElement + '.' + k, v);
         });
       } else {
+        var paramName = changed.id;
           model.set('topology.elements.'
-                + app.activeElement + '.' + changed.id, result);
+                + app.activeElement + '.' + paramName, result);
       }
     },
 

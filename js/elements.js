@@ -12,6 +12,10 @@ app.elementUtils = {
     if (paramValue == null && param.prop('tagName') === 'SELECT') {
       return '@null@';
     }
+    var input = $('input[id="' + paramName + '"][type="number"]');
+    if (input.length && param.prop('type') === 'checkbox') {
+      param.prop('checked', paramValue == null).change();
+    }
     return paramValue;
   },
 
@@ -23,6 +27,10 @@ app.elementUtils = {
   fromInputValue: function(element, param, paramName, paramValue) {
     if (paramValue === '@null@' && $(param).prop('tagName') === 'SELECT') {
       paramValue = null;
+    }
+    var checkbox = $('input[id="' + paramName + '"][type="checkbox"]');
+    if (checkbox.length) {
+      paramValue = $(param).is(':checked') ? null : 1234;
     }
     return this.isCustomized(paramName)
         ? app.elementUtils.custom[paramName].fromInputValue(

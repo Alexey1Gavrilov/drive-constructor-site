@@ -24,7 +24,7 @@
     {% if param[1].nullValue %}
     <div class="input-group">
       <span class="input-group-addon">
-        <input id="{{param[0]}}-checkbox" type="checkbox" data-param-id="{{param[0]}}" aria-label="..."> any</input>
+        <input id="{{param[0]}}" type="checkbox" aria-label="..."> any</input>
       </span>
     {% endif %}
 	 	<input id="{{param[0]}}" min="{{param[1].min}}"
