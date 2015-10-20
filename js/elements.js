@@ -28,8 +28,7 @@ app.elementUtils = {
     if (paramValue === '@null@' && $(param).prop('tagName') === 'SELECT') {
       paramValue = null;
     }
-    var checkbox = $('input[id="' + paramName + '"][type="checkbox"]');
-    if (checkbox.length) {
+    if (param.type === 'checkbox') {
       if ($(param).is(':checked')) {
         $(param).data('default-value', paramValue);
         paramValue = null; 
