@@ -14,7 +14,7 @@ app.elementUtils = {
     }
     var input = $('input[id="' + paramName + '"][type="number"]');
     if (input.length && param.prop('type') === 'checkbox') {
-      param.prop('checked', paramValue == null).change();
+      param.prop('checked', paramValue == null);//.change();
     }
     return paramValue;
   },
@@ -30,7 +30,12 @@ app.elementUtils = {
     }
     var checkbox = $('input[id="' + paramName + '"][type="checkbox"]');
     if (checkbox.length) {
-      paramValue = $(param).is(':checked') ? null : 1234;
+      if ($(param).is(':checked')) {
+        $(param).data('default-value', paramValue);
+        paramValue = null; 
+      } else {
+        paramValue = $(param).data('default-value') || null;
+      }
     }
     return this.isCustomized(paramName)
         ? app.elementUtils.custom[paramName].fromInputValue(
