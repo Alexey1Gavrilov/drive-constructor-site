@@ -17,7 +17,7 @@
       class="btn btn-default no-padding {{disabled}} {{active}}"
       data-element-button="{{e}}"
       onClick="app.selectTopologyElement('{{name}}', '{{e}}')">
-    <div class="icon-el-{{e}} normal"></div>
+    <div id="icon-el-{{e}}" class="icon-el-{{e}} normal"></div>
   </div>
 {% endfor %}
 </div>

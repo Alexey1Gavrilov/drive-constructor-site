@@ -45,9 +45,9 @@ app.elementUtils = {
         : paramValue;
   },
 
-   renderParam: function(element, param, paramName) {
+   renderParam: function(name, element, param, paramName) {
     if (app.elementUtils.custom[paramName] && app.elementUtils.custom[paramName].renderParam) {
-      return app.elementUtils.custom[paramName].renderParam(element, param);
+      return app.elementUtils.custom[paramName].renderParam(name, element, param);
     }
   },
 
@@ -126,11 +126,21 @@ app.elementUtils = {
     },
 
     coolantTemperature: {
-      renderParam: function(element, div) {
+      renderParam: function(name, element, div) {
         if (element['cooling'] === 'AIR') {
           div.hide();
         } else {
           div.show();
+        }
+      }      
+    },
+
+    type: {
+      renderParam: function(name, element, div) {
+        if (name == 'motor') {
+          var icon = $('div[id="icon-el-motor"');
+          icon.prop('class', 'icon-el-motor-'
+            + element['type'].toLowerCase() + ' normal');
         }
       }
     }

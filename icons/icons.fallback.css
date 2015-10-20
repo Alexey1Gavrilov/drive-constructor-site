@@ -24,11 +24,25 @@
 
 .icon-app-wind { background-image: url('png/app-wind.png'); background-repeat: no-repeat; }
 
+.icon-dfim_simple1 { background-image: url('png/dfim_simple1.png'); background-repeat: no-repeat; }
+
 .icon-el-cable { background-image: url('png/el-cable.png'); background-repeat: no-repeat; }
 
 .icon-el-converter { background-image: url('png/el-converter.png'); background-repeat: no-repeat; }
 
 .icon-el-grid { background-image: url('png/el-grid.png'); background-repeat: no-repeat; }
+
+.icon-el-motor-dfim { background-image: url('png/el-motor-dfim.png'); background-repeat: no-repeat; }
+
+.icon-el-motor-fwsm { background-image: url('png/el-motor-fwsm.png'); background-repeat: no-repeat; }
+
+.icon-el-motor-pmsm { background-image: url('png/el-motor-pmsm.png'); background-repeat: no-repeat; }
+
+.icon-el-motor-scim { background-image: url('png/el-motor-scim.png'); background-repeat: no-repeat; }
+
+.icon-el-motor-srm { background-image: url('png/el-motor-srm.png'); background-repeat: no-repeat; }
+
+.icon-el-motor-syrm { background-image: url('png/el-motor-syrm.png'); background-repeat: no-repeat; }
 
 .icon-el-motor { background-image: url('png/el-motor.png'); background-repeat: no-repeat; }
 

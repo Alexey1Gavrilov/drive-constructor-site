@@ -49,6 +49,7 @@ var app = app || {};
         $(object).find('div[id="element-param"]').each(function(j, div) {
           var paramName = $(div).data('param');
           app.elementUtils.renderParam(
+                element,
                 elements[element],
                 $(div),
                 paramName);
