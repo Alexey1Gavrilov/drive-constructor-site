@@ -57,7 +57,7 @@
     },
     "grid": {
       "type": "AC_FLOATING",
-      "frequency": 60,
+      "frequency": 50,
       "numberOfPhases": 3,
       "shortCircuitCurrent": 10,
       "shortCircuitPower": 1000,

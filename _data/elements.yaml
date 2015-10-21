@@ -34,7 +34,7 @@ pump:
 
   fluidDensity:
     type: select
-    label: Fluid density
+    label: Fluid
     values: [1000, 920, 820, 1035, 1025, 720]
     options: ["water", "average oil", "kerosene",
         "milk", "sea water", "gasoline"]
@@ -54,15 +54,17 @@ motor:
     values: ["SCIM", "PMSM", "SYRM", "FWSM", "DFIM"]
 
   ratedPower:
-    type: number
+    type: select
     label: Rated power (kW)
-    min: 0
-    max: 10000
-    nullValue: true
+    nullValue: "&lt;any&gt;"
+    values: [1.1, 1.5, 2.2, 3, 4, 5.5, 7.5, 11, 15, 18.5, 22, 30, 37,
+        45, 55, 75, 90, 110, 132, 160, 200, 250, 280, 315, 355, 400,
+        450, 500, 560, 630, 710, 800, 900, 1000, 1250, 1400, 1600,
+        2000, 2500, 3150, 4000]
 
   ratedVoltageYRange:
     type: select
-    label: Rated volatage Y
+    label: Rated voltage Y
     nullValue: "&lt;any&gt;"
     values: ["200-240", "380-440", "460-500", "550-600", "660-690", 
           "2200-2400", "3000-3300", "4100-4200", 
@@ -159,6 +161,7 @@ cable:
   areaConductor:
     type: select
     label: "Area of ph. conductor (mm2)"
+    nullValue: "&lt;auto-selection&gt;"
     values: [0.5, 0.75, 1, 1.5, 2.5, 4, 6, 10, 16, 25, 35, 50, 70,
         95, 120, 150, 180, 240, 300, 400, 500, 630, 800, 1000]
 
@@ -177,14 +180,17 @@ cable:
   condScreen:
     type: number
     label: Cond screen
+    nullValue: true
 
   er:
     type: number
     label: Coeff er
+    nullValue: true
 
   k:
     type: number
     label: Coeff K
+    nullValue: true
 
 converter:
   type:
