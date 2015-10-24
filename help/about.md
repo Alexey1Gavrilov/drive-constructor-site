@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-showInNavBar: true
+showInNavBar: false
 weight: 1
 ---
 
