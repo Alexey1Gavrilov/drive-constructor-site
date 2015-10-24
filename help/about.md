@@ -5,5 +5,5 @@ showInNavBar: false
 weight: 1
 ---
 
-# DC is ...
-ggg
+# DC is online software
+This online software is to
