@@ -6,5 +6,7 @@ weight: 1
 ---
 
 ## Contents
-* [About DC](about.html)
-* Equipment
+* [About Drive Constructor](about.html)
+* Applications
+* Equipment (system components)
+* Education materials
