@@ -5,5 +5,6 @@ showInNavBar: true
 weight: 1
 ---
 
-## Help
-
+## Contents
+* [About DC](about.html)
+* Equipment
