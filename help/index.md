@@ -7,7 +7,7 @@ weight: 1
 
 ## Contents
 * [About Drive Constructor](about.html)
-* [Applications](applications/overview.html)
+* [Applications](drive-constructor-site/help/applications/overview.html)
 * [Equipment (system components)](equipment.html)
 * [Education materials](education-materials.html)
 * [Special cases](spacial-cases.html)
