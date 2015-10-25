@@ -12,3 +12,4 @@ This section presents equipment which can be used to drive machanisms or deliver
 * [Softstarters] (softstarters.html)
 * [Transformers] (transformers.html)
 * [Gearboxes] (gearboxes.html)
+* [Power cables] (power-cables.html)
