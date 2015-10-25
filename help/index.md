@@ -10,4 +10,4 @@ weight: 1
 * [Applications](/applications/overview.html)
 * [Equipment (system components)](equipment.html)
 * [Education materials](education-materials.html)
-* [Special cases](spacial-cases.html)
+* [Special cases](special-cases.html)
