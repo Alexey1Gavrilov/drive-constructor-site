@@ -12,3 +12,4 @@ This section presents equipment which can be used to drive machanisms or deliver
 * [Transformers](transformers/transformers.html)
 * [Gearboxes](gearboxes/gearboxes.html)
 * [Power cables](power-cables/power-cables.html)
+* [Grid](grid/grid.html)
