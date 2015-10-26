@@ -1,1 +1,5 @@
-w t
+---
+layout: default
+---
+
+# Wind Turbine
