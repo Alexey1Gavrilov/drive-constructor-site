@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Applications overview:
+### Applications overview:
 
 * [Pump](pump/pump.html)
 * [Fan](fan/fan.html)
