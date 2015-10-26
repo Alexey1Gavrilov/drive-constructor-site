@@ -5,7 +5,7 @@ layout: default
 Applications overview:
 
 * [Pump](pump/pump.html)
-* [Fan](fan.html)
+* [Fan](fan/fan.html)
 * [Conveyor](conveyor.html)
 * [Extruder](extruder.html)
 * [Wind turbine](wind-turbine.html)
