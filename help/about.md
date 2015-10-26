@@ -1,12 +1,9 @@
 ---
 layout: default
-title: About
-showInNavBar: false
-weight: 1
 ---
 
-# Drive Constructor: discover the beauty and complexity of the world of standard components!
+# Discover the beauty and complexity of the systems build from standard components!
 
-This free online software is to help you to understand how to build systems optimal for your task. 
+*Drive Constructor* is free online software is to help you to understand how to build systems optimal for your task. 
 
 
