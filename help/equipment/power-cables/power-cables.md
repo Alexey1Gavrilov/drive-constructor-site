@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+# Power cables
+
+...
