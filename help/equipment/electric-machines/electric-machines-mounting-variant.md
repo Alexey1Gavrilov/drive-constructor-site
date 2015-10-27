@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+# Mounting variant
+
+...
