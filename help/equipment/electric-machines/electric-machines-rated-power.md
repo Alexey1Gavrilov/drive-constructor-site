@@ -4,7 +4,7 @@ layout: default
 
 # Rated power
 
-Rated power of electric machine can be in principle any value. Note that the edit box requires input in **kW**, not *W* or *MW*.
+Rated power of electric machine can have in principle any value. Note that the edit box requires input in **kW**, not *W* or *MW*. IEC standard defines the row of powers. Some range is presented below.
 
 No | Power, kW | No | Power, kW | No | Power, kW | No | Power, kW | No | Power, kW
 ------------ | ------------- | ------------ | ------------- | ------------ | ------------- | ------------ | ------------- | ------------ | -------------
