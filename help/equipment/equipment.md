@@ -4,7 +4,7 @@ layout: default
 
 # System components
 
-This section presents equipment which can be used to drive machanisms or deliver generated power to the grid
+This section presents equipment which being put together in systems can be used to drive machanisms or deliver generated power to the grid
 
 * [Electric machines](electric-machines/electric-machines.html)
 * [Frequency converters](frequency-converters/frequency-converters.html)
