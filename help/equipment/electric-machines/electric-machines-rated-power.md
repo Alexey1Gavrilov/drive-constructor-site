@@ -4,7 +4,7 @@ layout: default
 
 # Rated power
 
-Rated power of electric machine can have in principle any value. Note that the edit box requires input in **kW**, not *W* or *MW*. IEC standard defines the row/range of powers. Part of the range is presented below.
+*Rated power* of electric machine can have in principle any value. Upper limit today is probably in the magnitude of 100 MW. Lower limit is probably a few Watts. IEC standard defines the row/range of powers. Part of the range is presented below. The current version of *Drive Constructor* contains electic machines with powers in the range of 1,1-1250 kW. 
 
 Number...  |  Power, kW......  |  Number...  |  Power, kW......  |  Number...  |  Power, kW......  |  Number...  |  Power, kW......  |  Number...  |  Power, kW 
 ------------   |   -------------   | ------------ | ------------- | ------------ | ------------- | ------------ | ------------- | ------------ | -------------
@@ -19,3 +19,4 @@ Number...  |  Power, kW......  |  Number...  |  Power, kW......  |  Number...  |
 9 | 2,2 | 19 | 37 | 29 | 280 | 39 | 900 |  | 
 10| 3 | 20 | 45 | 30 | 315 | 40 | 1000 |  | 
 
+Note that the fall down list contains values in **kW**, not *W* or *MW*. 
