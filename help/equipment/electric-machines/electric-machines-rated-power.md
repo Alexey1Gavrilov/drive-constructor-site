@@ -19,7 +19,3 @@ Number--  |  Power, kW--  |  Number--  |  Power, kW--  |  Number--  |  Power, kW
 9 | 2,2 | 19 | 37 | 29 | 280 | 39 | 900 |  | 
 10| 3 | 20 | 45 | 30 | 315 | 40 | 1000 |  | 
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
