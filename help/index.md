@@ -6,7 +6,7 @@ weight: 1
 ---
 
 ## Contents
-* [About Drive Constructor](about.html)
+* [About *Drive Constructor*](about.html)
 * [Applications](applications/overview.html)
 * [Equipment (system components)](equipment/equipment.html)
 * [General information about drives](general-information-about-drives.html)
