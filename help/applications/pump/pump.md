@@ -4,6 +4,12 @@ layout: default
 
 # Pump
 
+Power on shaft of a pump can be calculated as
+
+$$
+	\Phi(x) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^x e^{-\xi^2/2}\; d\xi
+$$
+
 Parameters of the pump used in *Drive Constructor*:
 
 * [Type](pump-types.html)
