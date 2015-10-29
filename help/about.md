@@ -10,6 +10,6 @@ The system between the mechanism and the grid can include various equipment; bot
 
 Navigating through the *Help* section of this website you can take a look at the selection of [applications](applications/overview.html), learn about what we mean by ["optimal systems"](applications/overview.html), see the list of [equipment](equipment/equipment.html) which you can choose to build your own systems and read about [algorithms](algorithms/algorithms.html) used in *Drive Constructor* for automatic selection of the components for your system. 
 
-##### Discover the complexity and versatility of the systems build from standard components!
+#### Discover the complexity and versatility of the systems build from standard components!
 
 Good luck;-)
