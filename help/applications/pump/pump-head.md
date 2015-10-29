@@ -2,4 +2,5 @@
 layout: default
 ---
 
-# Head
+## Head
+*Head* is heigh to which the pump lifts the liquid.
