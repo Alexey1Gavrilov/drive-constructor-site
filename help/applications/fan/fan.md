@@ -4,5 +4,5 @@ layout: default
 
 # Fan
 
-* [Type](fan-type.html)
+* [Type](fan-types.html)
 * [Flow](fan-flow.html)
