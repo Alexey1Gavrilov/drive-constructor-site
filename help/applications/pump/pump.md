@@ -7,7 +7,7 @@ layout: default
 Power on shaft of a pump can be calculated as
 
 $$
-	\Phi(x) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^x e^{-\xi^2/2}\; d\xi
+	\P = \frac{1}{\sqrt{2 \pi}
 $$
 
 Parameters of the pump used in *Drive Constructor*:
