@@ -1,5 +1,5 @@
 {% capture more_info %}
-[More info...](/help/{{include.element}}/{{param[0]}}.html)
+[More info...](/help/applications/{{include.element}}/{{param[0]}}.html)
 {% endcapture %}
 {% assign param=site.data.elements[page.element][include.param] %}
 <div id="element-param" data-param="{{param[0]}}" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 form-group">
