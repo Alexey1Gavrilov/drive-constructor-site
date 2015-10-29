@@ -13,7 +13,7 @@ $$
 
 
 $$
-	\P = \frac{1}{\sqrt{2 \pi}
+	\P = \frac{1}{\sqrt{2 \pi}}
 $$
 
 Parameters of the pump used in *Drive Constructor*:
