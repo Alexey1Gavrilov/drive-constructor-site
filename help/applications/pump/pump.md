@@ -8,7 +8,7 @@ mathjax: true
 Power on shaft of a pump can be calculated as
 
 $$
-	P = \frac{H F}{\sqrt{2 \pi}}
+	P = \frac{q \ro g h}{3.6 * 10 6}
 $$
 
 Parameters of the pump used in *Drive Constructor*:
