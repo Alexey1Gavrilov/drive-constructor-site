@@ -1,8 +1,9 @@
 ---
 layout: default
 mathjax: true
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML"></script>
 ---
+
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML"></script>
 
 # Pump
 
