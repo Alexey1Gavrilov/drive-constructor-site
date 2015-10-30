@@ -12,4 +12,6 @@ Navigating through the *Help* section of this website you can take a look at the
 
 ### Discover the complexity and versatility of the systems build from standard components!
 
+![pump&motor](/images/pumpNmotor.png)
+
 Good luck;-)
