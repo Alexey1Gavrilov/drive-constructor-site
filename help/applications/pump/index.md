@@ -1,12 +1,16 @@
 ---
 layout: default
 mathjax: true
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML"></script>
 ---
 
 # Pump
 
 Power on shaft of a pump can be calculated as
 
+'sum_(i=1)^n i^3=((n(n+1))/2)^3'
+
+		
 $$
 	P = \frac{q*r*g*h}{3.6*10^6}
 $$
