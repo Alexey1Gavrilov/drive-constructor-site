@@ -3,8 +3,6 @@ layout: default
 mathjax: true
 ---
 
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML"></script>
-
 # Pump
 
 Power on shaft of a pump can be calculated as
