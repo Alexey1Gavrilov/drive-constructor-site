@@ -15,7 +15,7 @@ where
 	P=(g * rho * h * eta)/(3.6 * 10^6)
 `
 
-- is density.
+is density.
 
 Parameters of the pump used in *Drive Constructor*:
 
