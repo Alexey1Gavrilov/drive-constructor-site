@@ -5,11 +5,13 @@ mathjax: true
 # Pump
 
 To select proper drive train for a pump we need to know four parameters:
+
 * Required rated torque on shaft of the pump
 * [Starting torque of the pump](startingTorque.html)
 * [Rated rotational speed of the pump's shaft](ratedSpeed.html)
 * Load curve of the pump
 <br>
+
 There exist numerous [types](type.html) of pumps. For us pump types defines first of load characteristics and [starting torque as *T_rated](startingTorque.html). We also require such pump parameters as [head](head.html) and [flow](flow.html).
 <br>
 Power on shaft of a pump can be calculated as
