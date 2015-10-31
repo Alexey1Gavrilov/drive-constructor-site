@@ -5,9 +5,9 @@ mathjax: true
 # Pump
 
 Power on shaft of a pump can be calculated as
-` 	P=(g rho h eta)/(3.6 10^6) `
+` 	P=(g * rho * h * q)/(3.6 * 10^6 * eta) `
 
-where ` rho ` is density of the [pumped fluid](fluidDensity.html), ` eta ` is [efficiency](ratedEfficiency.html) of the pump, ` g ` is gravity and ` h ` is [head](head.html).
+where ` P ` is in ` kW `, ` g ` is gravity (` g=9.81 m/s^2 `), ` rho ` is density of the [pumped fluid](fluidDensity.html) in ` kg/m^3 `, ` eta ` is [efficiency](ratedEfficiency.html) of the pump, and ` h ` is [head](head.html) in ` m `.
 
 Parameters of the pump used in *Drive Constructor*:
 
