@@ -6,7 +6,7 @@ mathjax: true
 
 Power on shaft of a pump can be calculated as
 `
-	sum_(i=1)^n i^3=((n(n+1))/2)^2
+	P=g rho h eta/(3,6 10^6)
 `
 
 Parameters of the pump used in *Drive Constructor*:
