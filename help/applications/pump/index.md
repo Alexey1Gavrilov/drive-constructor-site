@@ -23,7 +23,7 @@ Pump's power can be calculated from it's parameters [head](head.html) and [flow]
 
 where ` P ` is in ` kW ` , ` g ` is gravity ( ` g = 9.81 m/s^2 ` ), ` rho ` is density of the [pumped fluid](fluidDensity.html) in ` (kg) / m^3 ` , ` eta ` is [efficiency](ratedEfficiency.html) of the pump,  ` h ` is [head](head.html) in ` m ` and [flow](flow.html) in ` m^3 / h  ` .
 
-Full list of parameters of a pump used in *Drive Constructor*:
+Full list of all parameters used in *Drive Constructor* for pumps:
 
 * [Type](type.html)
 * [Head](head.html)
