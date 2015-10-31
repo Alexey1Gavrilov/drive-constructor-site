@@ -11,10 +11,7 @@ Power on shaft of a pump can be calculated as
 
 where
 
-`
-	rho
-`
-
+`rho -`
 - is density.
 
 Parameters of the pump used in *Drive Constructor*:
