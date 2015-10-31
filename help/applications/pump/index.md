@@ -4,12 +4,14 @@ mathjax: true
 ---
 # Pump
 
+There exist numerous [types](type.html) of pumps. For us pump types defines first of load characteristics and [starting torque as *T_rated](startingTorque.html). We also require such pump parameters as [head](head.html) and [flow](flow.html).
+<br>
 Power on shaft of a pump can be calculated as
-` 	P=(g * rho * h * q)/(3.6 * 10^6 * eta) `
+` 	P=(g * rho * h * q)/(3.6 * 10^6 * eta) ` ,
 
-where ` P ` is in ` kW ` , ` g ` is gravity ( ` g = 9.81 m/s^2 ` ), ` rho ` is density of the [pumped fluid](fluidDensity.html) in ` (kg) / m^3 ` , ` eta ` is [efficiency](ratedEfficiency.html) of the pump, and ` h ` is [head](head.html) in ` m `.
+where ` P ` is in ` kW ` , ` g ` is gravity ( ` g = 9.81 m/s^2 ` ), ` rho ` is density of the [pumped fluid](fluidDensity.html) in ` (kg) / m^3 ` , ` eta ` is [efficiency](ratedEfficiency.html) of the pump,  ` h ` is [head](head.html) in ` m ` and [flow](flow.html) in ` m^3 / h  ` .
 
-Parameters of the pump used in *Drive Constructor*:
+Full list of parameters of the pump used in *Drive Constructor*:
 
 * [Type](type.html)
 * [Head](head.html)
