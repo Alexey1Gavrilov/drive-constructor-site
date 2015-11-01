@@ -4,7 +4,7 @@ mathjax: true
 ---
 # Pump
 
-To select proper drive train for a pump *Drive Constructor* uses four parameters:
+To configure proper drive train for a pump *Drive Constructor* uses four parameters:
 
 * Required rated torque on shaft of the pump
 * [Starting torque of the pump](startingTorque.html)
