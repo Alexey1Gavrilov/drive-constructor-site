@@ -32,7 +32,7 @@ From the power and the speed the torque can be calculated as follows:
 <br>
 where ` n ` is speed in *rpm*, ` P ` is power in *kW* and ` T ` is torque in *kNm*.
 <br>
-Please note that your pump can work at heads and flows lower than the rated ones for which it is designed. Speed and efficiency can then be different from the rate ones as well. So, please enter actual head, flow, speed and efficiency.
+Please note that your pump can work at heads and flows lower than the rated ones for which it is designed. Speed and efficiency can then be different from the rated ones as well. So, please enter actual head, flow, speed and efficiency.
 <br>
 <br>
 Full list of all the parameters used in *Drive Constructor* for pumps:
