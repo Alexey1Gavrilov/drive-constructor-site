@@ -24,6 +24,7 @@ Pump's power can be calculated from it's parameters [head](head.html) and [flow]
 <br>
 where ` P ` is in *kW*, ` g ` is gravity ( ` g = 9.81 m/s^2 ` ), ` rho ` is density of the [pumped fluid](fluidDensity.html) in ` (kg) / m^3 ` , ` eta ` is [efficiency](ratedEfficiency.html) of the pump,  ` h ` is [head](head.html) in *m* and ` q ` is  [flow](flow.html) in ` m^3 / h  ` .
 <br>
+<br>
 From the power and the speed the torque can be calculated as follows:
 <br>
 ` 	
@@ -31,6 +32,7 @@ From the power and the speed the torque can be calculated as follows:
 ` ,
 <br>
 where ` n ` is speed in *rpm*, ` P ` is power in *kW* and ` T ` is torque in *kNm*.
+<br>
 <br>
 Please note that your pump can work at heads and flows lower than the rated ones for which it is designed. Speed and efficiency can then be different from the rated ones as well. So, please enter actual head, flow, speed and efficiency.
 <br>
