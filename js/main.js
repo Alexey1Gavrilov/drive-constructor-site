@@ -15,20 +15,37 @@ app.resetSystem = function() {
   window.location.reload();
 }
 
+app.invalidInputs = [];
+
 app.onError = function(model, response) {
-  var message = response.responseText;
+  var message = '';
   if (response.responseJSON.errors) {
-    message = response.responseJSON.errors.join('<br>');   
+    response.responseJSON.errors.forEach(function (v) {
+      if (v.property.startsWith('topology.elements.')) {
+        var path = v.property.split('.');
+        var form = $('#element-form-' + path[2]);
+        var input = $(form.find($('#' + path[3])));
+        input.addClass('invalid-input');
+        app.invalidInputs.push(input);
+        var label = $(form.find($('#label-' + path[3]))).text();
+        message += '"' + label + '" ' + v.message + '<br />';
+      } else {
+        message += v.message + '<br />';
+      }
+    });
   } else if (response.responseJSON.message) {
     message = response.responseJSON.message;
   }
-  console.log(message);
   var html = app.alertTemplate({message: message});
-  $('#alert-placeholder').append(html);  
+  $('#alert-placeholder').append(html);
 }
 
 app.saveSystem = function() {
   $('#alert-placeholder').find('.alert').alert('close');
+  app.invalidInputs.forEach(function(i) {
+    i.removeClass('invalid-input')
+  });
+  app.invalidInputs = [];
   app.system.save({}, {
     error: app.onError,
     
