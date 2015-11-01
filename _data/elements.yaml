@@ -99,6 +99,8 @@ motor:
     label: Cooling
     values: ["AIR", "WATER", "IC411",
         "IC71W", "IC01", "IC611", "IC81W", "IC31"]
+    options: ["air", "water", "IC411",
+        "IC71W", "IC01", "IC611", "IC81W", "IC31"]
   
   efficiencyClass:
     type: select
@@ -122,8 +124,9 @@ motor:
   explosionProtection:
     type: select
     label: Explosion protection
-    nullValue: "&lt;no&gt;"
-    values: ["Ex", "Exe", "ExD"]
+    nullValue: "&lt;any&gt;"
+    options: ["no", "Ex", "ExE", "ExD"]
+    values: ["NO", "EX", "EX_E", "EX_D"]
 
   insulationClass:
     type: select
@@ -230,7 +233,7 @@ converter:
     type: select
     label: Explosion protection
     nullValue: "&lt;any&gt;"
-    options: ["no", "Ex", "Exe", "ExD"]
+    options: ["no", "Ex", "ExE", "ExD"]
     values: ["NO", "EX", "EX_E", "EX_D"]
 
   ratedPower:
@@ -259,8 +262,10 @@ converter:
           "6000-6600", "10000-11000"]
   cooling:
     type: select
+    nullValue: "&lt;any&gt;"
     label: Cooling
     values: ["AIR", "WATER"]
+    options: ["air", "water"]
 
   altitude:
     type: number
@@ -283,6 +288,7 @@ converter:
     label: Mounting variant
     nullValue: "&lt;any&gt;"
     values: ["WALL", "FLOOR"]
+    options: ["wall", "floor"]
 
 grid:
 
