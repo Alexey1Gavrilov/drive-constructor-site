@@ -19,11 +19,13 @@ Load curve and [starting torque](startingTorque.html) of the pump depend on the 
 <br>
 
 Pump's power can be calculated from it's parameters [head](head.html) and [flow](flow.html) using also [density of pumped fluid](fluidDensity.html):
+<br>
 ` 	P=(g * rho * h * q)/(3.6 * 10^6 * eta) ` ,
 
 where ` P ` is in ` kW ` , ` g ` is gravity ( ` g = 9.81 m/s^2 ` ), ` rho ` is density of the [pumped fluid](fluidDensity.html) in ` (kg) / m^3 ` , ` eta ` is [efficiency](ratedEfficiency.html) of the pump,  ` h ` is [head](head.html) in ` m ` and [flow](flow.html) in ` m^3 / h  ` .
 <br>
 From the power and the speed the torque can be calculated as follows:
+<br>
 ` 	T=(9.55 * P)/n ` ,
 where ` n ` is in ` (rpm) ` , ` P ` is in ` kW ` and ` T ` is in ` kNm ` .
 <br>
