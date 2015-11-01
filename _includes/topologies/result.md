@@ -6,12 +6,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 
 <div class="row">
-  <div class="col-xs-6 col-md-6">
+  <div class="col-xs-4 col-md-4">
+    <h4>Pump</h4>
+    <textarea id="pump" rows="10" class="form-control">
+    </textarea>
+  </div>
+  <div class="col-xs-4 col-md-4">
     <h4>Motor</h4>
     <textarea id="motor" rows="10" class="form-control">
     </textarea>
   </div>
-  <div class="col-xs-6 col-md-6">
+  <div class="col-xs-4 col-md-4">
     <h4>Converter</h4>
     <textarea id="converter" rows="10" class="form-control">
     </textarea>

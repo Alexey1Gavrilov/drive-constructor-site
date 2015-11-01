@@ -5,9 +5,10 @@ var app = app || {};
 app.apiUrl = "{{ site.apiUrl }}";
 
 app.alertTemplate = _.template([
-  '<div class="alert alert-warning">',
+  '<div class="alert alert-danger">',
     '<a href="#" class="close" data-dismiss="alert">&times;</a>',
-    '<strong>Warning!</strong> <%= message %>',
+    '<strong>Errors:</strong><br />',
+    '<%= message %>',
   '</div>'].join(''));
 
 app.resetSystem = function() {
@@ -17,6 +18,10 @@ app.resetSystem = function() {
 
 app.invalidInputs = [];
 
+String.prototype.capitalizeFirstLetter = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
+
 app.onError = function(model, response) {
   var message = '';
   if (response.responseJSON.errors) {
@@ -24,11 +29,15 @@ app.onError = function(model, response) {
       if (v.property.startsWith('topology.elements.')) {
         var path = v.property.split('.');
         var form = $('#element-form-' + path[2]);
+        var button = $('#icon-el-' + path[2]);
+        button.addClass('invalid-element');
         var input = $(form.find($('#' + path[3])));
         input.addClass('invalid-input');
-        app.invalidInputs.push(input);
+        app.invalidInputs.push({input: input, button: button});
         var label = $(form.find($('#label-' + path[3]))).text();
-        message += '"' + label + '" ' + v.message + '<br />';
+        message += '<i>' + path[2].capitalizeFirstLetter() 
+            + ' :: '+ label + ' : </i> '
+            + v.message + '<br />';
       } else {
         message += v.message + '<br />';
       }
@@ -43,7 +52,8 @@ app.onError = function(model, response) {
 app.saveSystem = function() {
   $('#alert-placeholder').find('.alert').alert('close');
   app.invalidInputs.forEach(function(i) {
-    i.removeClass('invalid-input')
+    i.input.removeClass('invalid-input');
+    i.button.removeClass('invalid-element');
   });
   app.invalidInputs = [];
   app.system.save({}, {
@@ -59,6 +69,8 @@ app.saveSystem = function() {
 app.showResult = function() {
   $('#result').removeClass('hidden');
   $('#save-button').prop('disabled', true);
+  var pump = app.system.toJSON().topology.elements.pump;
+  $('textarea[id="pump"]').val(JSON.stringify(pump, null, 2));
   var motor = app.system.toJSON().topology.elements.motor;
   $('textarea[id="motor"]').val(JSON.stringify(motor, null, 2));
   var converter = app.system.toJSON().topology.elements.converter;

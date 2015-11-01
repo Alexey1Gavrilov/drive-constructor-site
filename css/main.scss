@@ -8,6 +8,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border: 1px;
 }
 
 .big {
@@ -52,4 +53,8 @@
 
 .invalid-input {
   border-color: red;
+}
+
+.invalid-element {
+  border: 1px solid red;
 }
