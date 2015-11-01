@@ -13,8 +13,6 @@ To select proper drive train for a pump *Drive Constructor* uses four parameters
 <br>
 
 Load curve and [starting torque](startingTorque.html) of the pump depend on the pump's type. There exist many different [types](type.html) of pumps. 
-<br>
-
 [Rated rotational speed of the pump's shaft](ratedSpeed.html) is given for any pump in respective  brochures or catalogues. 
 <br>
 
