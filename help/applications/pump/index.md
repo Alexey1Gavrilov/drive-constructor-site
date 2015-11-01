@@ -4,7 +4,7 @@ mathjax: true
 ---
 # Pump
 
-To select proper drive train for a pump we need to know four parameters:
+To select proper drive train for a pump *Drive Constructor* uses four parameters:
 
 * Required rated torque on shaft of the pump
 * [Starting torque of the pump](startingTorque.html)
@@ -34,7 +34,9 @@ From the power and the speed the torque can be calculated as follows:
 <br>
 where ` n ` is speed in *rpm*, ` P ` is power in ` kW ` and ` T ` is torque in ` kNm ` .
 <br>
-
+Please note that your pump can work at heads and flows lower than the rated ones for which it is designed, so please enter actual head and flow.
+<br>
+<br>
 Full list of all parameters used in *Drive Constructor* for pumps:
 
 * [Type](type.html)
