@@ -9,4 +9,4 @@ layout: default
 * Electromagnetic compatibility (EMC)
 * Variable speed in applications
 * Load curves
-* [Filters](help/equipment/frequency-converters/Filters.html)
+* [Filters](help/equipment/frequency-converters/filters.html)
