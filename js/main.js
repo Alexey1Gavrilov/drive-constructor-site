@@ -31,8 +31,9 @@ app.onError = function(model, response) {
         var form = $('#element-form-' + path[2]);
         var button = $('#icon-el-' + path[2]);
         button.addClass('invalid-element');
-        var input = $(form.find($('#' + path[3])));
-        input.addClass('invalid-input');
+        var input = $(form.find($('div[data-param="'
+            + path[3] + '"]')));
+        input.addClass('has-error');
         app.invalidInputs.push({input: input, button: button});
         var label = $(form.find($('#label-' + path[3]))).text();
         message += '<i>' + path[2].capitalizeFirstLetter() 
@@ -52,7 +53,7 @@ app.onError = function(model, response) {
 app.saveSystem = function() {
   $('#alert-placeholder').find('.alert').alert('close');
   app.invalidInputs.forEach(function(i) {
-    i.input.removeClass('invalid-input');
+    i.input.removeClass('has-error');
     i.button.removeClass('invalid-element');
   });
   app.invalidInputs = [];
@@ -60,7 +61,6 @@ app.saveSystem = function() {
     error: app.onError,
     
     success: function() {
-      app.showResult();
       app.selectTopologyElement(null, 'result');
     }
   });  

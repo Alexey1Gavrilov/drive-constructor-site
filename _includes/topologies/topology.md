@@ -27,13 +27,11 @@
 <div id='alert-placeholder'></div>
 
 <div id="element-form">
-<form id="form">
 {% for e in topology.elements %}
   <div id="element-form-{{e}}" hidden data-element-form="{{e}}">
   {% include topologies/element-form.md element=e %}
   </div><!-- end form -->
 {% endfor %}
-</form>
   <div id="result" class="hidden container row">
   {% include topologies/result.md %}
   </div>
