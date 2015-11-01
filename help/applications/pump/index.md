@@ -29,10 +29,10 @@ where ` P ` is in ` kW ` , ` g ` is gravity ( ` g = 9.81 m/s^2 ` ), ` rho ` is d
 From the power and the speed the torque can be calculated as follows:
 <br>
 ` 	
-  T=(9.55 * P)/n 
+     T=(9.55 * P)/n 
 ` ,
 <br>
-where ` n ` is in *rpm*, ` P ` is in ` kW ` and ` T ` is in ` kNm ` .
+where ` n ` is speed in *rpm*, ` P ` is power in ` kW ` and ` T ` is torque in ` kNm ` .
 <br>
 
 Full list of all parameters used in *Drive Constructor* for pumps:
