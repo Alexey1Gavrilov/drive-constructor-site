@@ -9,4 +9,4 @@ layout: default
 * Electromagnetic compatibility (EMC)
 * Variable speed in applications
 * Load curves
-* [Filters](staging.driveconstructor.com/help/equipment/frequency-converters/filters.html)
+* [Filters](equipment/frequency-converters/filters.html)
