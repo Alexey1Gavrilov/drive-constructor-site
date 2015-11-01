@@ -5,14 +5,14 @@ layout: default
 # Frequency Converter
 
 * Main principles
-* Types/topologies 
+* [Types](FC-types.html)/topologies
 * [Grid-side filter](FC-grid-side-filter.html)
 * [Machine-side filter](FC-machine-side-filter.html)
-* Protection
-* Explosion protection
+* [Protection](FC-protection.html)
+* [Explosion protection](FC-explosion-protection.html)
 * [Rated power (low overload)](FC-rated-power.html)
-* Grid side voltage
-* Machine side voltage
+* [Grid side voltage](FC-grid-side-voltage.html)
+* [Machine side voltage](FC-machine-side-voltage.html)
 * [Cooling](FC-cooling.html)
 * [Altitude](FC-altitude.html)
 * [Ambient temperature](FC-ambient-temperature.html)
@@ -31,13 +31,12 @@ Full list of parameters of Frequency Converters used in *Drive Constructor*:
 * [Ambient temperature](FC-ambient-temperature.html)
 * [Coolant temperature](FC-coolant-temperature.html)
 * [Cooling](FC-cooling.html)
-* [...](FC-efficiency-class.html)
 * [Mounting variant](FC-mounting-variant.html)
 * [Protection](FC-protection.html)
 * [Explosion protection](FC-explosion-protection.html)
 * [Grid-side filter](FC-grid-side-filter.html)
 * [Machine-side filter](FC-machine-side-filter.html)
-* [...](FC-frame-material.html)
-
+* [Grid side voltage](FC-grid-side-voltage.html)
+* [Machine side voltage](FC-machine-side-voltage.html)
 
 ![2L-VSC](image/fc-topologies/2l-vsc.png)
