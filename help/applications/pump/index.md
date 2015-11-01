@@ -24,7 +24,7 @@ Pump's power can be calculated from it's parameters [head](head.html) and [flow]
   P=(g * rho * h * q)/(3.6 * 10^6 * eta) 
 ` ,
 <br>
-where ` P ` is in ` kW ` , ` g ` is gravity ( ` g = 9.81 m/s^2 ` ), ` rho ` is density of the [pumped fluid](fluidDensity.html) in ` (kg) / m^3 ` , ` eta ` is [efficiency](ratedEfficiency.html) of the pump,  ` h ` is [head](head.html) in ` m ` and [flow](flow.html) in ` m^3 / h  ` .
+where ` P ` is in ` kW ` , ` g ` is gravity ( ` g = 9.81 m/s^2 ` ), ` rho ` is density of the [pumped fluid](fluidDensity.html) in ` (kg) / m^3 ` , ` eta ` is [efficiency](ratedEfficiency.html) of the pump,  ` h ` is [head](head.html) in ` m ` and ` q ` is  [flow](flow.html) in ` m^3 / h  ` .
 <br>
 From the power and the speed the torque can be calculated as follows:
 <br>
