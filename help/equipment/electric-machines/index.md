@@ -4,7 +4,7 @@ layout: default
 
 # Electric machines
 
-Only rotating AC machines with cylindrical cores with inner rotor are included into the first version. Other special configurations like linear machines, disk machines, etc will be considered for next versions. DC machines are not included either. They may be considered for next versions as well. 
+Only rotating AC machines with cylindrical cores with inner rotor are included into the first version of *Drive Constructor*. Other special configurations like linear machines, disk machines, etc will be considered for next versions. DC machines are not included either. They may be considered for next versions as well. 
 
 * [Types](type.html)
 * [Rated power](ratedPower.html)
