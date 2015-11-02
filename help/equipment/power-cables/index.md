@@ -27,6 +27,6 @@ layout: default
 
 ####	Coefficients 
 
-Cond screen
-Coeff er
-Coeff K
+* Cond screen
+* Coeff er
+* Coeff K
