@@ -4,6 +4,8 @@ layout: default
 
 # Electric machines
 
+Only rotating AC machines with cylindrical cores with inner rotor are included into the first version. Other special configurations like linear machines, disk machines, etc will be considered for next versions. DC machines are not included yet also. They will be considered for next versions. 
+
 * [Types](electric-machine-types.html)
 * [Rated power](electric-machines-rated-power.html)
 * [Rated voltage](electric-machines-rated-voltage.html)
