@@ -4,10 +4,29 @@ layout: default
 
 # Power cables
 
-*	Type
-* Length
-* Area of ph. conductor
-* Conductor material
-* Temperature
-* Coefficients (Cond screen, Coeff er, Coeff K) 
+####	Types
 
+...
+
+####	Length
+
+* du/dt-effect
+* Filters
+
+####	Area of ph. conductor
+
+...
+
+####	Conductor material
+
+...
+
+####	Temperature
+
+...
+
+####	Coefficients 
+
+* Cond screen
+* Coeff er
+* Coeff K
