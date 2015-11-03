@@ -16,7 +16,7 @@
       "ratedPower": null,
       "ratedVoltageYMin": null,
       "ratedVoltageYMax": null,
-      "ratedSynchronousSpeed": null,
+      "ratedSynchSpeed": null,
       "ratedFrequency": 50,
       "altitude": 1000,
       "cooling": null,

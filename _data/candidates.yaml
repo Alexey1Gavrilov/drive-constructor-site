@@ -1,0 +1,90 @@
+motor:
+  type:
+    label: Type
+  price:
+    label: Price
+    unit: Euro
+  ratedPower:
+    label: Rated power
+    unit: kW
+  ratedFrequency:
+    label: Rated frequency
+    unit: Hz
+  numberOfPoles:
+    label: Number of poles
+  efficiency100:
+    label: "Efficiency @ rated load"
+    unit: "%"
+  efficiency75:
+    label: "Efficiency @ 75% load"
+    unit: "%"
+  efficiency50:
+    label: "Efficiency @ 50% load"
+    unti: "%"
+  IE:
+    label: Efficiency class (IE)
+  ratedSpeed:
+    label: Rated speed
+    unit: rpm
+  ratedSynchSpeed:
+    label: Rated synchronous speed
+    unit: rpm
+  maximumSpeed:
+    label: Maximum speed
+    unit: rpm
+  ratedTorque:
+    label: Rated torque
+    unit: Nm
+  torqueOverload:
+    label: Overload capability
+  ratedCurrent:
+    label: Rated current
+    unit: A
+  workingCurrent:
+    label: Working current
+    unit: A
+  ratedVoltageYrange:
+    label: Rated voltage Y range 
+    unit: V
+  cosFi100:
+    label: cos_fi @ rated load
+  cosFi75:
+    label: "cos_fi @ 75% load"
+#  cosFi50:
+#    label: "cos_fi @ 50% load"
+  insulationClass:
+    label: Insulation class
+  mounting:
+    label: Mounting
+  cooling:
+    label: Cooling type
+  ipClass:
+    label: Protection
+  frameMaterial:
+    label: Frame material
+  shaftHeight:
+    label: Shaft height
+    unit: mm
+  outerDiameter:
+    label: Outer diameter
+    unit: m
+  length:
+    label: Axial length
+    unit: m
+  volume:
+    label: Volume
+    unit: m3
+  footprint:
+    label: Footprint
+    unit: m2
+  weight:
+    label: Weight
+    unit: kg
+  momentOfInertia:
+    label: Moment of inertia
+    unit: "kgm^2"
+  explosionProtection:
+    label: Explosion protection
+  dB:
+    label: Sound pressure
+  

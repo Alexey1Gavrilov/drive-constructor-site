@@ -75,6 +75,7 @@ app.showResult = function() {
   $('textarea[id="motor"]').val(JSON.stringify(motor, null, 2));
   var converter = app.system.toJSON().topology.elements.converter;
   $('textarea[id="converter"]').val(JSON.stringify(converter, null, 2));
+  app.showCandidates();
 },
 
 app.getCurrentTopologyUrl = function() {
