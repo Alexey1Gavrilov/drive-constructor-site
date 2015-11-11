@@ -3,7 +3,7 @@
   <label for="result-motor-select" class="control-label col-xs-2 col-md-2">Select</label>
   {% for index in (0..3) %}
   <div id="result-motor-group-{{index}}" class="col-xs-2 col-md-2">
-    <input name="result-motor-select" id="result-motor-select-{{index}}" type="radio"></input>
+    <input name="result-motor-select" id="result-motor-select-{{index}}" type="radio" data-candidate-index="{{index}}"></input>
   </div>
   {% endfor %}
 </div>

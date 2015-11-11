@@ -1,6 +1,10 @@
 motor:
   type:
     label: Type
+  manufacturer:
+    label: Manufacturer
+  designation:
+    label: Designation  
   price:
     label: Price
     unit: Euro

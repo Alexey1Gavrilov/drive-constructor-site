@@ -32,15 +32,15 @@
   {% include topologies/element-form.md element=e %}
   </div><!-- end form -->
 {% endfor %}
-  <div id="result" class="hidden container row">
-  {% include topologies/result.md %}
-  </div>
+</div>
+<div id="result" class="hidden container row">
+{% include topologies/result.md %}
 </div>
 
 
 <div class="pull-right">
   <button id="save-button" onClick="app.saveSystem()" 
-      class="btn-primary btn">Calculate</button>
+      class="btn-primary btn">Submit</button>
   <button id="reset-button" onClick="app.resetSystem()"
       class="btn-primary btn">Reset</button>
 </div>
