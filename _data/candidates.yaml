@@ -92,3 +92,68 @@ motor:
   dB:
     label: Sound pressure
   
+converter:
+  manufacturer:
+    label: Manufacturer
+  designation:
+    label: Designation
+  type:
+    label: Type
+  voltageMIN:
+    label: Voltage min
+    unit: V
+  voltageMAX:
+    label: Voltage max
+    unit: V
+  ratedPowerLO:
+    label: Rated power LO
+    unit: kW
+  ratedPowerHO:
+    label: Rated power HO
+    unit: Kw
+  currentLO:
+    label: Current LO
+    unit: A
+  currentHO:
+    label: Current HO
+    unit: A
+  maxFrequency:
+    label: Max frequency
+    unit: Hz
+  switchingFrequency:
+    label: Switching frequency
+    unit: kHz  
+  efficiency100:
+    label: Efficiency
+    unit: "%"
+  cosFi100:
+    label: cos fi
+  height:
+    label: Height
+    unit: m
+  width:
+    label: Width
+    unit: m
+  depth:
+    label: Depth
+    unit: m
+  weight:
+    label: Weight
+    unit: kg
+  mounting:
+    label: Mounting
+  gridGilter:
+    label: Grid filter
+  msfilter:
+    label: Machine side filter
+  ipClass:
+    label: IP
+  explosionProtection:
+    label: Explosion protection
+  cooling:
+    label: Cooling
+  ratedCoolantTemperature:
+    label: Rated coolant temp
+  price:
+    label: Price
+    unit: Euro

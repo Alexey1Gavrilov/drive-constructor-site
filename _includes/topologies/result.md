@@ -6,7 +6,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <div id="result-candidates">
   <div class="row">
-  {% include topologies/result-motor.md %}
+  {% include topologies/result-element.md name='motor' %}
+  </div>
+  <div class="row">
+  {% include topologies/result-element.md name='converter' %}
   </div>
 </div>
 <div id="result-final">
