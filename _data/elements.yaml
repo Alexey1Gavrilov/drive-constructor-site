@@ -70,7 +70,7 @@ motor:
           "2200-2400", "3000-3300", "4100-4200", 
           "6000-6600", "10000-11000"]
   
-  ratedSynchronousSpeedAtFrequency:
+  ratedSynchSpeedAtFrequency:
     type: select
     label: Rated synchronous speed
     nullValue: "&lt;any&gt;"

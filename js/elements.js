@@ -106,12 +106,12 @@ app.elementUtils = {
       }
     },
 
-    ratedSynchronousSpeedAtFrequency: {
+    ratedSynchSpeedAtFrequency: {
       toInputValue: function(element, param, paramName, paramValue) {
-        if (!element['ratedSynchronousSpeed'] || !element['ratedFrequency']) {
+        if (!element['ratedSynchSpeed'] || !element['ratedFrequency']) {
           return null;
         }
-        var value = element['ratedSynchronousSpeed'] + '@'
+        var value = element['ratedSynchSpeed'] + '@'
             + element['ratedFrequency'] + ' Hz';
         return value;
       },
@@ -119,7 +119,7 @@ app.elementUtils = {
       fromInputValue: function(element, param, paramName, paramValue) {
         var result = {};
         var array = paramValue == null ? null : paramValue.split(/[@|\s]/);
-        result['ratedSynchronousSpeed'] = array == null ? null : Number(array[0]);
+        result['ratedSynchSpeed'] = array == null ? null : Number(array[0]);
         result['ratedFrequency'] = array == null ? null : Number(array[1]);
         return result;
       }
