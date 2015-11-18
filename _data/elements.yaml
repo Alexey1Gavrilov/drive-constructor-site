@@ -4,8 +4,8 @@ pump:
     label: Type
     content: >
       There are many different types of pumps, each type having own load characteristic
-    values: ["CENTRIFUGAL", "PERIPHERAL", "SPECIAL",
-        "RECIPROCATING", "BLOW_CASE", "ROTARY"]
+    values: ["centrifugal", "peripheral", "special",
+        "reciprocating", "blow case", "rotary"]
   head:
     type: number
     label: Head (m)
@@ -51,7 +51,7 @@ motor:
   type:
     type: select
     label: Type
-    values: ["SCIM", "PMSM", "SYRM", "FWSM", "DFIM"]
+    values: ["any", "SCIM", "DFIM", "PMSM", "SyRM", "FWSM", "SRM"]
 
   ratedPower:
     type: select
@@ -97,10 +97,8 @@ motor:
     type: select
     nullValue: "&lt;any&gt;"
     label: Cooling
-    values: ["AIR", "WATER", "IC411",
-        "IC71W", "IC01", "IC611", "IC81W", "IC31"]
-    options: ["air", "water", "IC411",
-        "IC71W", "IC01", "IC611", "IC81W", "IC31"]
+    values: ["air", "water", "IC 411",
+        "IC 71W", "IC 01", "IC 611", "IC 81W", "IC 31"]
   
   efficiencyClass:
     type: select
@@ -125,8 +123,7 @@ motor:
     type: select
     label: Explosion protection
     nullValue: "&lt;any&gt;"
-    options: ["no", "Ex", "ExE", "ExD"]
-    values: ["NO", "EX", "EX_E", "EX_D"]
+    values: ["no", "Ex", "Exe", "ExD"]
 
   insulationClass:
     type: select
@@ -145,8 +142,7 @@ motor:
     type: select
     label: Frame material
     nullValue: "&lt;any&gt;"
-    values: ["STEEL", "ALUMINUM", "CAST_IRON"]
-    options: ["steel", "aluminum", "cast iron"]
+    values: ["steel", "aluminum", "cast iron"]
 
 cable:
   type:
@@ -200,28 +196,22 @@ converter:
     type: select
     label: Type
     nullValue: "&lt;any&gt;"
-    options: ["2Q_2L_VSC", "2Q_3L_NPC_VSC", "2Q_4L_FLC_VSC",
-        "2Q_5L_ANPC", "4Q_2L_VSC", "4Q_3L_NPC_VSC",
-        "4Q_4L_FLC_VSC", "4Q_5L_ANPC", "ML_SCHB_VSC", "CSI", "LCI",
-        "CC"]
-    values: ["_2Q_2L_VSC", "_2Q_3L_NPC_VSC", "_2Q_4L_FLC_VSC",
-        "_2Q_5L_ANPC", "_4Q_2L_VSC", "_4Q_3L_NPC_VSC",
-        "_4Q_4L_FLC_VSC", "_4Q_5L_ANPC", "ML_SCHB_VSC", "CSI", "LCI",
-        "CC"]
+    values: ["2Q-2L-VSC", "2Q-3L-NPC-VSC", "2Q-4L-FLC-VSC",
+         "2Q-5L-ANPC", "4Q-2L-VSC", "4Q-3L-NPC-VSC",
+         "4Q-4L-FLC-VSC", "4Q-5L-ANPC", "ML-SCHB-VSC",
+         "CSI", "LCI", "CC"]
 
   gridFilter:
     type: select
     label: Grid filter
     nullValue: "&lt;any&gt;"
-    options: ["no", "choke", "sin"]
-    values: ["NO", "CHOKE", "SIN"]
+    values: ["no", "choke", "sin"]
 
   machineSideFilter:
     type: select
     label: Machine side filter
     nullValue: "&lt;any&gt;"
-    options: ["no", "du/dt", "sin"]
-    values: ["NO", "DU_DT", "SIN"]
+    values: ["no", "du/dt", "sin"]
 
   ipClass:
     type: select
@@ -233,9 +223,8 @@ converter:
     type: select
     label: Explosion protection
     nullValue: "&lt;any&gt;"
-    options: ["no", "Ex", "ExE", "ExD"]
-    values: ["NO", "EX", "EX_E", "EX_D"]
-
+    values: ["no", "Ex", "Exe", "ExD"]
+ 
   ratedPower:
     type: select
     label: "Rated power (low overload), kW"
@@ -264,8 +253,7 @@ converter:
     type: select
     nullValue: "&lt;any&gt;"
     label: Cooling
-    values: ["AIR", "WATER"]
-    options: ["air", "water"]
+    values: ["air", "water"]
 
   altitude:
     type: number
@@ -287,8 +275,7 @@ converter:
     type: select
     label: Mounting variant
     nullValue: "&lt;any&gt;"
-    values: ["WALL", "FLOOR"]
-    options: ["wall", "floor"]
+    values: ["wall", "floor"]
 
 grid:
 

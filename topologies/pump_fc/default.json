@@ -2,7 +2,7 @@
   "type": "PumpFcTopology",
   "elements": {
     "pump": {
-      "type": "CENTRIFUGAL",
+      "type": "centrifugal",
       "head": 100,
       "flow": 50,
       "ratedEfficiency": 81,
@@ -22,7 +22,7 @@
       "cooling": null,
       "ipClass": null,
       "shaftHeight": null,
-      "explosionProtection": "NO",
+      "explosionProtection": "no",
       "coolantTemperature": 35,
       "mounting": null,
       "insulationClass": null,
@@ -40,7 +40,7 @@
       "k": 0.054
     },
     "converter": {
-      "type": "_2Q_2L_VSC",
+      "type": "2Q-2L-VSC",
       "gridFilter": null,
       "machineSideFilter": null,
       "coolantTemperature": 35,
