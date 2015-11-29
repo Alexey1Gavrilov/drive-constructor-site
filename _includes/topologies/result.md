@@ -31,14 +31,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-6 col-md-6">
-      <div class="thumbnail">
-        <img src="/images/result1.png"/>
-      </div>
-    </div>
-    <div class="col-xs-6 col-md-6">
-      <div class="thumbnail">
-        <img src="/images/result2.png"/>
+    <div class="col-xs-8 col-md-8">
+      <div id="load-graph" class="thumbnail">
       </div>
     </div>
   </div>

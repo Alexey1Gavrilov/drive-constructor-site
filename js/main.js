@@ -77,6 +77,10 @@ app.showResult = function() {
   $('textarea[id="converter"]').val(JSON.stringify(converter, null, 2));
   app.showCandidates('motor');
   app.showCandidates('converter');
+
+  if ($('#result-final').is(':visible')) {
+    app.showGraph();
+  }
 },
 
 app.getCurrentTopologyUrl = function() {
