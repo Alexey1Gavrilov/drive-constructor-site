@@ -78,7 +78,8 @@ app.showResult = function() {
   app.showCandidates('motor');
   app.showCandidates('converter');
 
-  if ($('#result-final').is(':visible')) {
+  if ($('#result-final').is(':visible')
+      || $('#result-motor').is(':visible')) {
     app.showGraph();
   }
 },

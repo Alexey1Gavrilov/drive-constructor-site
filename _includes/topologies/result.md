@@ -3,7 +3,14 @@
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </p>
-
+<div id="load-graph-container">
+  <div class="row">
+    <div class="col-xs-8 col-md-8">
+      <div id="load-graph" class="thumbnail">
+      </div>
+    </div>
+  </div>
+</div>
 <div id="result-candidates">
   <div class="row">
   {% include topologies/result-element.md name='motor' %}
@@ -28,12 +35,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       <h4>Converter</h4>
       <textarea id="converter" rows="10" class="form-control">
       </textarea>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-8 col-md-8">
-      <div id="load-graph" class="thumbnail">
-      </div>
     </div>
   </div>
 </div>
